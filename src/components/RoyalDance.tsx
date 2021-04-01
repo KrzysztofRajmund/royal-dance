@@ -2,18 +2,16 @@ import React from 'react';
 //router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //components
-import FooterComponent from './FooterComponent';
-import LandingPage from './Home/LandingPage';
+import MainComponent from './Home/MainComponent';
 
 function RoyalDance() {
   return (
   <Router>
     <Switch>
-<Route path="/">
-<LandingPage/>
-</Route>
+      <Route path="/">
+       <MainComponent/>
+      </Route>
     </Switch>
-    <FooterComponent/>
   </Router>
   );
 }
