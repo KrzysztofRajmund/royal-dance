@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/style.css';
+import './sass/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RoyalDance from './components/RoyalDance';
 import reportWebVitals from './reportWebVitals';

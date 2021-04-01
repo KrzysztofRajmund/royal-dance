@@ -1,0 +1,9 @@
+.topjumbotron-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.topjumbotron-container img {
+  background-image: url("../../assets/image-example.jpg");
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;CACd;;AAED,AAAA,uBAAuB,CAAC,GAAG,CAAC;EAC1B,gBAAgB,EAAE,qCAAqC;CACxD",
+    "sources": [
+        "main.scss",
+        "modules/_topjumbotron.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
