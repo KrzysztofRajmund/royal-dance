@@ -3,16 +3,18 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //components
 import TopJumbotron from './TopJumbotron/TopJumbotron';
+import TopNav from './TopNav/TopNav';
 
 function RoyalDance() {
   return (
-  <Router>
-    <Switch>
-      <Route path="/">
-       <TopJumbotron/>
-      </Route>
-    </Switch>
-  </Router>
+    <Router>
+      <TopNav />
+      <Switch>
+        <Route path="/">
+          <TopJumbotron />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,9 +1,10 @@
-@import './modules/_topjumbotron.scss';
+@charset "UTF-8";
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 20px;
-// }
+//utilities
+@import 'utilities/variables';
+//base
+@import 'base/base';
+//modules
+@import 'modules/topjumbotron';
+//layout
+@import 'layout/topnav';
