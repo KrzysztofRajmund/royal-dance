@@ -10,11 +10,10 @@ function RoyalDance() {
   return (
     <Router>
       <TopNav />
+
       <Switch>
         <Route path="/">
           <TopJumbotron />
-        </Route>
-        <Route path="/">
           <Cards />
         </Route>
       </Switch>
