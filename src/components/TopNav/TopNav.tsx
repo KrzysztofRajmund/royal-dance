@@ -6,7 +6,7 @@ import Logo from "../../assets/logo.png"
 import Facebook from "../../assets/facebook.png";
 import Instagram from "../../assets/instagram.png";
 
-const TopNav = () => {
+const TopNav: React.FC = () => {
     return (
         <nav className="topnav-container">
             <section className="topnav-logo">

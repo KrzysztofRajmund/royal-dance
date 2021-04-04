@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import TopJumbotron from './TopJumbotron/TopJumbotron';
 import TopNav from './TopNav/TopNav';
 import Cards from './Cards/Cards';
+import Footer from './Footer/Footer';
 
-function RoyalDance() {
+const RoyalDance: React.FC = () => {
   return (
     <Router>
       <TopNav />
@@ -17,6 +18,7 @@ function RoyalDance() {
           <Cards />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

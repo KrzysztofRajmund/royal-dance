@@ -1,6 +1,8 @@
 import React from 'react';
+//components
+import CardsSlider from './CardsSlider';
 
-const Cards = () => {
+const Cards: React.FC = () => {
     return (
 
 
@@ -22,7 +24,7 @@ const Cards = () => {
 
                 </div>
                 <div className="cards-slider">
-                    <img src="" alt="" /> Slider images
+                    <CardsSlider />
                 </div>
             </article>
         </section>

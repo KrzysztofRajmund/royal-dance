@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  height: 100vh;
+  font-family: $family-fonts-secondary;
+  background-color: #222326;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  article {
+    text-align: center;
+    margin: 3rem;
+  }
+}
+
+.footer-top {
+  img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+.footer-bottom {
+  img {
+    width: auto;
+    height: 50px;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    color: #919191;
+  }
+}

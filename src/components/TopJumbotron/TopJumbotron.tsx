@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopJumbotron = () => {
+const TopJumbotron: React.FC = () => {
     return (
 
 
