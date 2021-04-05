@@ -1,5 +1,5 @@
 .topnav-container {
-  background-color: #fff;
+  background-color: $whiteBackground;
   z-index: 10;
   position: sticky;
   top: 80%;
@@ -10,6 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .topnav-logo {
@@ -30,20 +34,19 @@
   flex: 70%;
   text-align: center;
   a {
+    color: $blackFontColor;
     padding: 0 2.5rem 0 2.5rem;
-    font-family: $family-fonts-secondary;
-    font-size: 1.8rem;
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.802);
-    background: linear-gradient(60deg, #d7bd78 50%, #ffffff 50%);
+    background: linear-gradient(
+      60deg,
+      $supplementaryFontColor 50%,
+      $whiteBackground 50%
+    );
     background-size: 250%;
     background-position: right;
     transition: 0.4s ease-out;
     &:hover {
       background-position: left;
-      color: #fff;
+      color: $whiteFontColor;
       text-decoration: none;
     }
   }

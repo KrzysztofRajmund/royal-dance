@@ -2,7 +2,6 @@
   width: 100vw;
   height: 100vh;
   padding: 5rem 4rem 5rem 4rem;
-  font-family: $family-fonts-secondary;
 
   article {
     width: 100%;
@@ -21,33 +20,38 @@
 .cards-content {
   padding: 8rem 4rem 4rem 4rem;
   text-align: right;
-  color: #fff;
-  background-color: #222326;
+  color: $whiteFontColor;
+  background-color: $blackBackground;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   h1:last-of-type {
-    color: #d7bd78;
+    color: $supplementaryFontColor;
   }
 }
 
 .cards-subcontent {
   padding: 8rem 4rem 4rem 4rem;
   text-align: left;
-  background-color: #e8e8ea3e;
-  color: #919191;
+  background-color: $supplementaryBackground;
+  color: $subcontentFontColor;
   overflow-x: hidden;
   overflow-y: auto;
   min-width: 33%;
-  p {
-    font-size: 1.6rem;
-  }
   .cards-subcontent-title {
     font-size: 2rem;
     font-weight: 900;
-    color: #5d5d5d;
+    color: $subcontentTitleFontColor;
+  }
+  p {
+    font-size: 1.6rem;
   }
 }
 
+//cards slider!!!
 .cards-slider {
   text-align: center;
+  img {
+    width: auto;
+    height: 100%;
+  }
 }

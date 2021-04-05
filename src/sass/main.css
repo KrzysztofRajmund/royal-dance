@@ -2,6 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -55,6 +56,8 @@ body {
   height: 100vh;
   padding: 0 0rem 5rem 0rem;
   margin-top: -80px;
+  text-transform: uppercase;
+  color: #2b2b2b;
 }
 
 .topjumbotron-img {
@@ -88,10 +91,6 @@ body {
   text-align: center;
   background-color: #f5f5f576;
   padding: 6rem 1rem 9rem 1rem;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  color: #2b2b2b;
 }
 
 .topjumbotron-img article h1 {
@@ -102,13 +101,13 @@ body {
 
 .topjumbotron-img article h3 {
   font-size: 2rem;
+  letter-spacing: 0.3rem;
 }
 
 .cards-container {
   width: 100vw;
   height: 100vh;
   padding: 5rem 4rem 5rem 4rem;
-  font-family: "Poppins", sans-serif;
 }
 
 .cards-container article {
@@ -149,15 +148,11 @@ body {
 .cards-subcontent {
   padding: 8rem 4rem 4rem 4rem;
   text-align: left;
-  background-color: #e8e8ea3e;
+  background-color: #f7f7f7;
   color: #919191;
   overflow-x: hidden;
   overflow-y: auto;
   min-width: 33%;
-}
-
-.cards-subcontent p {
-  font-size: 1.6rem;
 }
 
 .cards-subcontent .cards-subcontent-title {
@@ -166,8 +161,17 @@ body {
   color: #5d5d5d;
 }
 
+.cards-subcontent p {
+  font-size: 1.6rem;
+}
+
 .cards-slider {
   text-align: center;
+}
+
+.cards-slider img {
+  width: auto;
+  height: 100%;
 }
 
 .topnav-container {
@@ -189,6 +193,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .topnav-logo {
@@ -218,14 +226,9 @@ body {
 }
 
 .topnav-menu a {
+  color: #2b2b2b;
   padding: 0 2.5rem 0 2.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.802);
-  background: linear-gradient(60deg, #d7bd78 50%, #ffffff 50%);
+  background: linear-gradient(60deg, #d7bd78 50%, #fff 50%);
   background-size: 250%;
   background-position: right;
   -webkit-transition: 0.4s ease-out;
@@ -262,7 +265,6 @@ body {
 .footer {
   width: 100%;
   height: 100vh;
-  font-family: "Poppins", sans-serif;
   background-color: #222326;
   color: #fff;
   display: -webkit-box;
@@ -288,6 +290,15 @@ body {
 .footer-top img {
   width: 150px;
   height: auto;
+  opacity: 0.6;
+}
+
+.footer-middle {
+  color: #919191;
+}
+
+.footer-bottom {
+  cursor: pointer;
 }
 
 .footer-bottom img {
@@ -300,5 +311,42 @@ body {
   font-weight: 900;
   letter-spacing: 0.1rem;
   color: #919191;
+}
+
+.footer-bottom-arrow {
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0.3rem solid #d7bd78;
+  border-bottom: none;
+  border-right: none;
+  -webkit-animation: arrowJump 1.5s infinite;
+          animation: arrowJump 1.5s infinite;
+}
+
+@-webkit-keyframes arrowJump {
+  0% {
+    -webkit-transform: translateY(-2.5rem) rotate(45deg);
+            transform: translateY(-2.5rem) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem) rotate(45deg);
+            transform: translateY(0.5rem) rotate(45deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes arrowJump {
+  0% {
+    -webkit-transform: translateY(-2.5rem) rotate(45deg);
+            transform: translateY(-2.5rem) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0.5rem) rotate(45deg);
+            transform: translateY(0.5rem) rotate(45deg);
+    opacity: 0.9;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: $family-fonts-secondary;
 }
 
 html {
@@ -31,10 +32,10 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #222326;
+  background: $blackBackground;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #222326;
+  background: $blackBackground;
 }
