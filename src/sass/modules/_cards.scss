@@ -29,6 +29,11 @@
   letter-spacing: 0.3rem;
   h1:last-of-type {
     color: $supplementaryFontColor;
+    a {
+      color: $supplementaryFontColor;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -61,6 +66,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  animation: image-change 1s linear;
+}
+
+@keyframes image-change {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
 }
 
 .cards-slider.expand {
@@ -125,5 +141,89 @@
     border-top: none;
     border-right: none;
     transform: translate(2rem, 1.9rem) rotate(45deg);
+  }
+}
+
+// card slider TRIAL
+.slider-container {
+  // overflow: hidden;
+  // width: 300%;
+  // height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // animation: push-slider 9s infinite;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #120103;
+  color: #fff;
+  text-align: center;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  padding: 8em 1em 0;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: cover;
+  // transition: left 0s 0.75s;
+  // text-align: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center center;
+  // width: 33%;
+  // height: 100%;
+}
+
+.slider-one {
+  background-image: url('../assets/img1.jpg');
+  animation: push-slider 8s infinite;
+  animation-delay: 0s;
+}
+
+.slider-two {
+  background-image: url('../assets/img2.jpg');
+  animation: push-slider 8s infinite;
+  animation-delay: 2s;
+}
+
+.slider-three {
+  background-image: url('../assets/img3.jpg');
+  animation: push-slider 8s infinite;
+  animation-delay: 4s;
+}
+
+@keyframes push-slider {
+  0% {
+    // transform: translateX(0);
+    // right: 0;
+    // transition: right 0.65s ease-out;
+    opacity: 1;
+  }
+
+  25% {
+    // transform: translateX(-100%);
+    // right: 100%;
+    // transition: right 0.65s ease-out;
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

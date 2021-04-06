@@ -11,6 +11,8 @@ interface Props {
 
 const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) => {
 
+
+
     //array of object TYPESCRIPT: solution 1!
     // const images: { id: number, title: string, url: string }[] = [
     //     {
@@ -61,6 +63,34 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) 
     //     }
     // ]
 
+    // const sliderArray: string[] = [img1, img2, img3];
+    // let index: number = 0
+
+    // const automaticSlider = () => {
+    //     index += 1
+    //     if (index < sliderArray.length) {
+    //         sliderContainer.style.backgroundImage = `url(${sliderArray[index]})`
+    //         console.log("first", sliderArray[index], index)
+    //         setTimeout(() => automaticSlider(), 3000)
+    //     }
+
+    //     if (index >= sliderArray.length) {
+    //         index = 0
+    //         sliderContainer.style.backgroundImage = `url(${sliderArray[index]})`
+    //         console.log("second", sliderArray[index], index)
+    //         setTimeout(() => automaticSlider(), 3000)
+    //     }
+
+
+
+    // }
+
+    // if (sliderContainer) {
+    //     automaticSlider()
+
+    // }
+
+
     const expandSlider = () => {
         sliderContainer.classList.toggle("expand");
         subcontentContainer.style.display = "none"
@@ -89,7 +119,7 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) 
     return (
         <React.Fragment>
             <button className="slider-buttons show-button" onClick={expandSlider}>show</button>
-            <div className="slider-buttons arrows arrow-right"><div className="right"></div></div>
+            <div className="slider-buttons arrows arrow-right" ><div className="right"></div></div>
             <div className="slider-buttons arrows arrow-left"><div className="left"></div></div>
         </React.Fragment>
     )
