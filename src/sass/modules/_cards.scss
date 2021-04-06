@@ -9,15 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    div {
+    .cards-content,
+    .cards-subcontent,
+    .cards-slider {
       width: 100%;
       height: 100%;
-      flex: 33%;
     }
   }
 }
 
 .cards-content {
+  flex: 33%;
+  max-width: 33%;
   padding: 8rem 4rem 4rem 4rem;
   text-align: right;
   color: $whiteFontColor;
@@ -30,6 +33,7 @@
 }
 
 .cards-subcontent {
+  flex: 33%;
   padding: 8rem 4rem 4rem 4rem;
   text-align: left;
   background-color: $supplementaryBackground;
@@ -49,9 +53,77 @@
 
 //cards slider!!!
 .cards-slider {
+  z-index: 5;
+  flex: 33%;
+  position: relative;
   text-align: center;
-  img {
-    width: auto;
-    height: 100%;
+  background-image: url('../assets/img1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cards-slider.expand {
+  flex: 66%;
+}
+
+.slider-buttons {
+  width: 6rem;
+  height: 6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+}
+
+.show-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: $blackBackground;
+  color: $supplementaryFontColor;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.arrows {
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  bottom: 0;
+  background-color: #d7be78bb;
+  color: $blackFontColor;
+}
+
+.arrow-right {
+  display: none;
+  right: 0;
+  border-radius: 3px 0px 0px 0px;
+  .right {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.4rem solid $blackFontColor;
+    border-bottom: none;
+    border-left: none;
+    transform: translate(1rem, 1.9rem) rotate(45deg);
+  }
+}
+
+.arrow-left {
+  display: none;
+  left: 0;
+  border-radius: 0px 3px 0px 0px;
+  .left {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.4rem solid $blackFontColor;
+    border-top: none;
+    border-right: none;
+    transform: translate(2rem, 1.9rem) rotate(45deg);
   }
 }

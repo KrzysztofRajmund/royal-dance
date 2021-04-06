@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 //components
 import CardsSlider from './CardsSlider';
 
 const Cards: React.FC = () => {
+
+    const [sliderContainer, setSliderContainer] = useState<any>()
+    const [subcontentContainer, setSubcontentContainer] = useState<any>()
+
+    useEffect(() => {
+        setSliderContainer(document.getElementsByClassName("cards-slider")[0]);
+        setSubcontentContainer(document.getElementsByClassName("cards-subcontent")[0]);
+    }, [])
+
     return (
 
 
@@ -24,7 +33,7 @@ const Cards: React.FC = () => {
 
                 </div>
                 <div className="cards-slider">
-                    <CardsSlider />
+                    <CardsSlider sliderContainer={sliderContainer} subcontentContainer={subcontentContainer} />
                 </div>
             </article>
         </section>

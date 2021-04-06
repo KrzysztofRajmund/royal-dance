@@ -32,10 +32,10 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $blackBackground;
+  background: $supplementaryFontColor;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $blackBackground;
+  background: $supplementaryFontColor;
 }
