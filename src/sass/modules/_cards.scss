@@ -19,6 +19,8 @@
 }
 
 .cards-content {
+  font-size: $titleFontSize;
+  line-height: 5rem;
   flex: 33%;
   max-width: 33%;
   padding: 8rem 4rem 4rem 4rem;
@@ -29,11 +31,6 @@
   letter-spacing: 0.3rem;
   h1:last-of-type {
     color: $supplementaryFontColor;
-    a {
-      color: $supplementaryFontColor;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
   }
 }
 
@@ -47,12 +44,12 @@
   overflow-y: auto;
   min-width: 33%;
   .cards-subcontent-title {
-    font-size: 2rem;
+    font-size: $subtitleFontSize;
     font-weight: 900;
     color: $subcontentTitleFontColor;
   }
   p {
-    font-size: 1.6rem;
+    font-size: $paragraphFontSize;
   }
 }
 
@@ -86,7 +83,7 @@
 .slider-buttons {
   width: 6rem;
   height: 6rem;
-  font-size: 1.5rem;
+  font-size: $paragraphFontSize;
   font-weight: 600;
   text-transform: uppercase;
   border: none;

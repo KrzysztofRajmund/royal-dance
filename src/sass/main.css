@@ -88,6 +88,7 @@ body {
   top: 20%;
   left: 0;
   right: 0;
+  line-height: 6rem;
   text-align: center;
   background-color: #f5f5f576;
   padding: 6rem 1rem 9rem 1rem;
@@ -100,7 +101,7 @@ body {
 }
 
 .topjumbotron-img article h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   letter-spacing: 0.3rem;
 }
 
@@ -132,6 +133,8 @@ body {
 }
 
 .cards-content {
+  font-size: 3rem;
+  line-height: 5rem;
   -webkit-box-flex: 33%;
       -ms-flex: 33%;
           flex: 33%;
@@ -148,12 +151,6 @@ body {
   color: #d7bd78;
 }
 
-.cards-content h1:last-of-type a {
-  color: #d7bd78;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
 .cards-subcontent {
   -webkit-box-flex: 33%;
       -ms-flex: 33%;
@@ -168,7 +165,7 @@ body {
 }
 
 .cards-subcontent .cards-subcontent-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #5d5d5d;
 }
@@ -223,7 +220,7 @@ body {
 .slider-buttons {
   width: 6rem;
   height: 6rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
   border: none;
@@ -388,7 +385,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   letter-spacing: 0.2rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -543,5 +540,52 @@ body {
             transform: translateY(0.5rem) rotate(45deg);
     opacity: 0.9;
   }
+}
+
+.contact-contact h1 {
+  font-weight: 600;
+}
+
+.contact-contact h1:last-of-type {
+  font-weight: 500;
+}
+
+.contact-contact h1:last-of-type a {
+  color: #d7bd78;
+  text-decoration: none;
+}
+
+.contact-contact h1:last-of-type a:last-of-type {
+  padding-right: 0.4rem;
+}
+
+.contact-address {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  line-height: 5rem;
+}
+
+.contact-address a:hover {
+  text-decoration: none;
+}
+
+.contact-address h1:first-of-type {
+  color: #5d5d5d;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.contact-address h1:first-of-type:hover {
+  color: #5d5d5d;
+}
+
+.contact-address h1 {
+  font-size: 2.2rem;
+  color: #919191;
+}
+
+.contact-address h1:hover {
+  color: #d7bd78;
 }
 /*# sourceMappingURL=main.css.map */
