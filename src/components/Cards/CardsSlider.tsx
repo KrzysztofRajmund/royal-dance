@@ -89,7 +89,7 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) 
     //     automaticSlider()
 
     // }
-    console.log(window.location)
+
 
     const expandSlider = () => {
         sliderContainer.classList.toggle("expand");

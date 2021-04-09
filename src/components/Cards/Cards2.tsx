@@ -10,8 +10,6 @@ const Cards2: React.FC = () => {
             <section className="slider slider-three"></section>
             <section className="slider slider-two"></section>
             <section className="slider slider-one"></section>
-
-
         </div>
 
     )

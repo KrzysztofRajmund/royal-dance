@@ -64,7 +64,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/image-example.jpg");
+  background-image: url("../assets/pattern3.png"), url("../assets/image-example.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -227,6 +227,7 @@ body {
 }
 
 .show-button {
+  z-index: 90;
   position: absolute;
   right: 0;
   top: 50%;
@@ -289,7 +290,6 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #120103;
-  color: #fff;
   text-align: center;
 }
 
@@ -308,62 +308,14 @@ body {
 
 .slider-one {
   background-image: url("../assets/img1.jpg");
-  -webkit-animation: push-slider 8s infinite;
-          animation: push-slider 8s infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 
 .slider-two {
   background-image: url("../assets/img2.jpg");
-  -webkit-animation: push-slider 8s infinite;
-          animation: push-slider 8s infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
 }
 
 .slider-three {
   background-image: url("../assets/img3.jpg");
-  -webkit-animation: push-slider 8s infinite;
-          animation: push-slider 8s infinite;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-@-webkit-keyframes push-slider {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes push-slider {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .topnav-container {
