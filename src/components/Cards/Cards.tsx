@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 //components
 import CardsSlider from './CardsSlider';
+//assets
+import img1 from "../../assets/img1.jpg";
+import img2 from "../../assets/img2.jpg";
+import img3 from "../../assets/img3.jpg";
 
 const Cards: React.FC = () => {
 
@@ -11,6 +15,28 @@ const Cards: React.FC = () => {
         setSliderContainer(document.getElementsByClassName("cards-slider")[0]);
         setSubcontentContainer(document.getElementsByClassName("cards-subcontent")[0]);
     }, [])
+
+    // let count = 200
+
+    // setInterval(() => {
+
+    //     let slider: any = document.getElementById("slider-1");
+
+    //     if (count >= 600) {
+    //         count = 0
+
+    //         slider.style.marginLeft = `-${count}vw`
+
+    //     } else {
+
+    //         slider.style.marginLeft = `-${count}vw`
+
+    //     }
+
+    //     count = 200 + count
+    //     // console.log(" I am interval", count)
+    // }, 2000)
+
 
     return (
 
@@ -33,6 +59,18 @@ const Cards: React.FC = () => {
 
                 </div>
                 <div className="cards-slider">
+                    <div className="sliders">
+                        <section className="slider slider-one" id="slider-1">
+
+                        </section>
+                        <section className="slider slider-two" id="slider-2">
+
+                        </section>
+                        <section className="slider slider-three" id="slider-3">
+
+                        </section>
+                    </div>
+
                     <CardsSlider sliderContainer={sliderContainer} subcontentContainer={subcontentContainer} />
                 </div>
             </article>
