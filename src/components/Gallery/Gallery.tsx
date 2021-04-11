@@ -1,5 +1,9 @@
 import React from 'react';
+//json
 import imagesData from "../../imagesData.json";
+//components
+import ModalGallery from './ModalGallery';
+
 const Gallery: React.FC = () => {
     console.log(imagesData)
     return (
@@ -13,6 +17,7 @@ const Gallery: React.FC = () => {
 
                 )
             })}
+            <ModalGallery />
         </section>
     )
 }
