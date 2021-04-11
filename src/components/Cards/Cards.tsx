@@ -16,26 +16,34 @@ const Cards: React.FC = () => {
         setSubcontentContainer(document.getElementsByClassName("cards-subcontent")[0]);
     }, [])
 
-    // let count = 200
+    let count = 100
+    console.log("pathname", window.location.pathname)
 
-    // setInterval(() => {
+    setInterval(() => {
 
-    //     let slider: any = document.getElementById("slider-1");
+        let slider: any = document.getElementById("slider-1");
 
-    //     if (count >= 600) {
-    //         count = 0
+        if (count >= 300) {
+            count = 0
 
-    //         slider.style.marginLeft = `-${count}vw`
+            slider.style.marginLeft = `-${count}%`
 
-    //     } else {
+        } else {
 
-    //         slider.style.marginLeft = `-${count}vw`
+            if (slider === null) {
+                return
+            } else {
+                slider.style.marginLeft = `-${count}%`
+                console.log(slider, "slider")
+            }
 
-    //     }
 
-    //     count = 200 + count
-    //     // console.log(" I am interval", count)
-    // }, 2000)
+        }
+
+        count = 100 + count
+    }, 4000)
+
+
 
 
     return (

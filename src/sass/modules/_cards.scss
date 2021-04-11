@@ -57,66 +57,42 @@
 
 //cards slider!!!
 .cards-slider {
-  // overflow: hidden;
+  overflow: hidden;
   z-index: 1;
   flex: 33%;
   height: 100%;
   position: relative;
   text-align: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center center;
-  animation: image-change 1s linear;
-  .sliders {
-    width: 300%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .slider {
-    width: 100%;
-    height: 100vh;
-    transition: 1s linear;
-  }
-
-  .slider-one {
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url('../assets/img1.jpg');
-    margin-left: -60%;
-  }
-  .slider-two {
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url('../assets/img2.jpg');
-  }
-
-  .slider-three {
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url('../assets/img3.jpg');
-  }
+}
+.sliders {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes image-change {
-  0% {
-    transform: translateX(0);
-  }
+.slider {
+  width: 100%;
+  height: 100%;
+  transition: 1s linear;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
 
-  100% {
-    transform: translateX(-200%);
-  }
+.slider-one {
+  background-image: url('../assets/img1.jpg');
+}
+.slider-two {
+  background-image: url('../assets/img2.jpg');
+}
+
+.slider-three {
+  background-image: url('../assets/img3.jpg');
 }
 
 .cards-slider.expand {
@@ -184,54 +160,3 @@
     transform: translate(2rem, 1.9rem) rotate(45deg);
   }
 }
-
-// card slider TRIAL
-// .slider-container {
-//   height: 100vh;
-//   width: 100vw;
-//   position: relative;
-//   overflow: hidden;
-//   background-color: #120103;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .sliders {
-//   width: 300%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .slider {
-//   width: 100vw;
-//   height: 100vh;
-//   transition: 1s linear;
-// }
-
-// .slider-one {
-//   min-width: 100vw;
-//   height: 100vh;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   background-image: url('../assets/img1.jpg');
-// }
-// .slider-two {
-//   min-width: 100vw;
-//   height: 100vh;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   background-image: url('../assets/img2.jpg');
-// }
-
-// .slider-three {
-//   min-width: 100vw;
-//   height: 100vh;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   background-image: url('../assets/img3.jpg');
-// }

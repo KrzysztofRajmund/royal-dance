@@ -1,0 +1,32 @@
+{"images":[
+    {
+        "id":1,
+        "category": "",
+        "url":"img1.jpg"
+    },
+       {
+        "id":2,
+        "category": "",
+        "url":"img2.jpg"
+    },
+       {
+        "id":3,
+        "category": "",
+        "url":"img3.jpg"
+    },
+       {
+        "id":4,
+        "category": "",
+        "url":"img4.jpg"
+    },
+       {
+        "id":5,
+        "category": "",
+        "url":"img5.jpg"
+    },
+       {
+        "id":6,
+        "category": "",
+        "url":"img6.jpg"
+    }
+]}
