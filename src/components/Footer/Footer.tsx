@@ -1,4 +1,5 @@
 import React from 'react';
+//assets
 import Logo2 from "../../assets/logo2.png"
 
 const Footer: React.FC = () => {

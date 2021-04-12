@@ -8,6 +8,8 @@ import Cards from './Cards/Cards';
 import Footer from './Footer/Footer';
 import Contact from './Contact/Contact';
 import Gallery from './Gallery/Gallery';
+import About from './About/About';
+import Offers from './Offers/Offers';
 
 const RoyalDance: React.FC = () => {
   return (
@@ -15,11 +17,17 @@ const RoyalDance: React.FC = () => {
       <TopNav />
 
       <Switch>
-        <Route path="/kontakt">
-          <Contact />
+        <Route path="/onas">
+          <About />
+        </Route>
+        <Route path="/oferta">
+          <Offers />
         </Route>
         <Route path="/galeria">
           <Gallery />
+        </Route>
+        <Route path="/kontakt">
+          <Contact />
         </Route>
         <Route path="/">
           <TopJumbotron />

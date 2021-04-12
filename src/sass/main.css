@@ -646,4 +646,24 @@ html {
   top: 5%;
   right: 5%;
 }
+
+.about article .cards-subcontent {
+  text-align: center;
+}
+
+.about article .cards-content h1 img {
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+}
+
+.offers article .cards-subcontent {
+  text-align: center;
+}
+
+.offers article .cards-content h1 img {
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+}
 /*# sourceMappingURL=main.css.map */
