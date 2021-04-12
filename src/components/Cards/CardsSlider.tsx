@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import img1 from "../../assets/img1.jpg";
 // import img2 from "../../assets/img2.jpg";
 // import img3 from "../../assets/img3.jpg";
+//utils
+import sliderInterval from './../utilities/sliderInterval';
 
 interface Props {
-    sliderContainer: any;
-    subcontentContainer: any;
+    sliderContainer: any,
+    subcontentContainer: any,
+    sliderFirst?: any
 }
 
 
-const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) => {
+const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer, sliderFirst }) => {
 
 
 
@@ -64,33 +67,20 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) 
     // ]
 
     // const sliderArray: string[] = [img1, img2, img3];
-    // let index: number = 0
-
-    // const automaticSlider = () => {
-    //     index += 1
-    //     if (index < sliderArray.length) {
-    //         sliderContainer.style.backgroundImage = `url(${sliderArray[index]})`
-    //         console.log("first", sliderArray[index], index)
-    //         setTimeout(() => automaticSlider(), 3000)
-    //     }
-
-    //     if (index >= sliderArray.length) {
-    //         index = 0
-    //         sliderContainer.style.backgroundImage = `url(${sliderArray[index]})`
-    //         console.log("second", sliderArray[index], index)
-    //         setTimeout(() => automaticSlider(), 3000)
-    //     }
 
 
+    //useState hooks
+    const [count, setCount] = useState<number>(100)
+    //slider interval
+    sliderInterval(count, sliderFirst);
+    //useEffect hooks
+    useEffect(() => {
+        sliderInterval(count, sliderFirst);
+        console.log(count)
+    }, [count])
 
-    // }
 
-    // if (sliderContainer) {
-    //     automaticSlider()
-
-    // }
-
-
+    //show button
     const expandSlider = () => {
         sliderContainer.classList.toggle("expand");
         subcontentContainer.style.display = "none"
@@ -114,14 +104,22 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer }) 
             }
         }
     }
+    //nextImage Arrow Handler
+    const nextImageHandler = () => {
+        if (count < 300) {
+            setCount(count + 100)
+        } else {
+            setCount(100)
+        }
 
+    }
 
     return (
         <React.Fragment>
             <button className="slider-buttons show-button" onClick={expandSlider}>show</button>
-            {window.location.pathname !== "/kontakt" ?
+            {window.location.pathname === "/" ?
                 <>
-                    <div className="slider-buttons arrows arrow-right" ><div className="right"></div></div>
+                    <div className="slider-buttons arrows arrow-right" onClick={nextImageHandler} ><div className="right"></div></div>
                     <div className="slider-buttons arrows arrow-left"><div className="left"></div></div>
                 </> : ""
             }

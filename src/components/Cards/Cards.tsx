@@ -6,45 +6,21 @@ import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
 import img3 from "../../assets/img3.jpg";
 
+
 const Cards: React.FC = () => {
 
+    //global var
+    let sliderFirst: any = document.getElementById("slider-1");
+
+    //useState hook
     const [sliderContainer, setSliderContainer] = useState<any>()
     const [subcontentContainer, setSubcontentContainer] = useState<any>()
 
+    //useEffect hooks
     useEffect(() => {
         setSliderContainer(document.getElementsByClassName("cards-slider")[0]);
         setSubcontentContainer(document.getElementsByClassName("cards-subcontent")[0]);
     }, [])
-
-    let count = 100
-    console.log("pathname", window.location.pathname)
-
-    setInterval(() => {
-
-        let slider: any = document.getElementById("slider-1");
-
-        if (count >= 300) {
-            count = 0
-
-            slider.style.marginLeft = `-${count}%`
-
-        } else {
-
-            if (slider === null) {
-                return
-            } else {
-                slider.style.marginLeft = `-${count}%`
-                console.log(slider, "slider")
-            }
-
-
-        }
-
-        count = 100 + count
-    }, 4000)
-
-
-
 
     return (
 
@@ -79,7 +55,7 @@ const Cards: React.FC = () => {
                         </section>
                     </div>
 
-                    <CardsSlider sliderContainer={sliderContainer} subcontentContainer={subcontentContainer} />
+                    <CardsSlider sliderContainer={sliderContainer} subcontentContainer={subcontentContainer} sliderFirst={sliderFirst} />
                 </div>
             </article>
         </section>
