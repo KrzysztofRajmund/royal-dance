@@ -433,23 +433,63 @@ body {
 @media screen and (max-width: 825px) {
   .topnav-container {
     font-size: 2.2rem;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    height: 100vh;
   }
   .topnav-logo {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
+    margin: 3rem 0.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .topnav-menu {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .topnav-menu a {
+    margin: 1.2rem 0;
   }
   .topnav-socialmedia {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .topnav-socialmedia a {
+    text-align: center;
+  }
+  .topnav-socialmedia a img {
+    margin: 3rem 1rem;
   }
 }
 

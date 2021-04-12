@@ -78,17 +78,38 @@
 @media screen and (max-width: 825px) {
   .topnav-container {
     font-size: $subtitleFontSize;
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
   }
   .topnav-logo {
     flex: 100%;
+    margin: 3rem 0.2rem;
+    display: flex;
+    align-items: center;
   }
 
   .topnav-menu {
     flex: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: 1.2rem 0;
+    }
   }
 
   .topnav-socialmedia {
     flex: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    a {
+      text-align: center;
+      img {
+        margin: 3rem 1rem;
+      }
+    }
   }
 }
