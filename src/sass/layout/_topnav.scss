@@ -297,6 +297,9 @@
 }
 
 @media screen and (max-width: 825px) {
+  .topnav-logo {
+    margin-left: 0;
+  }
   .topnav-menu {
     display: none;
   }
