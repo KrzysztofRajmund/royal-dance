@@ -203,3 +203,9 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 345px) {
+  .cards-container {
+    padding: 0;
+  }
+}

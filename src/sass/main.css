@@ -387,6 +387,12 @@ body {
   }
 }
 
+@media screen and (max-width: 345px) {
+  .cards-container {
+    padding: 0;
+  }
+}
+
 .topnav-container {
   background-color: #fff;
   z-index: 10;
