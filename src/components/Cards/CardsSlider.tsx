@@ -72,12 +72,14 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer, sl
     //useState hooks
     const [count, setCount] = useState<number>(100)
     //slider interval
-    sliderInterval(count, sliderFirst);
-    //useEffect hooks
-    useEffect(() => {
+    if (window.location.pathname === "/") {
         sliderInterval(count, sliderFirst);
-        console.log(count)
-    }, [count])
+    }
+    //useEffect hooks
+    // useEffect(() => {
+    //     sliderInterval(count, sliderFirst);
+    //     console.log(count, sliderFirst)
+    // }, [count])
 
 
     //show button
