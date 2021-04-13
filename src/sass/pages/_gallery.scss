@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   .gallery-image {
     flex: 25%;
+    max-width: 25%;
     padding: 0.2rem;
     cursor: pointer;
     img {
@@ -64,4 +65,22 @@
 .x-icon {
   top: 5%;
   right: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    .gallery-image {
+      flex: 33.33%;
+      max-width: 33.33%;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .gallery {
+    .gallery-image {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
 }
