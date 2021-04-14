@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: $blackBackground;
   color: $whiteFontColor;
@@ -9,7 +9,7 @@
   align-items: center;
   article {
     text-align: center;
-    margin: 3rem;
+    margin-top: 6rem;
   }
 }
 

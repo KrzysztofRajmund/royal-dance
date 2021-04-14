@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 //json
 import imagesData from "../../imagesData.json";
 //components
 import ModalGallery from './ModalGallery';
+import Loading from '../utilities/Loading';
 
 const Gallery: React.FC = () => {
 
@@ -18,7 +20,13 @@ const Gallery: React.FC = () => {
     const minusSign: number = -1;
     //useState hooks
     const [modal, setModal] = useState<boolean>(false);
-    const [modalImage, setModalImage] = useState<any>()
+    const [modalImage, setModalImage] = useState<any>();
+    const [loading, setLoading] = useState<boolean>(true);
+    //useEffect Hook
+    useEffect(() => {
+        setTimeout(() => { setLoading(false) }, 1000)
+
+    }, [])
 
 
     //change image function
@@ -70,22 +78,26 @@ const Gallery: React.FC = () => {
 
 
     return (
+        <React.Fragment>
+            { loading ? <Loading /> : (
+                <section className="gallery">
 
-        <section className="gallery">
+                    {imagesData.images.map((image) => {
+                        return (
+                            <div key={image.id} className="gallery-image" onClick={() => openModalHandler(image)}>
+                                <img src={image.url} alt={`image-${image.id}`} />
+                            </div>
 
-            {imagesData.images.map((image) => {
-                return (
-                    <div key={image.id} className="gallery-image" onClick={() => openModalHandler(image)}>
-                        <img src={image.url} alt={`image-${image.id}`} />
+                        )
+                    })}
+                    <div onClick={(e) => modalHandler(e)}>
+                        {modal && <ModalGallery id={modalImage.id} url={modalImage.url} />}
                     </div>
+                </section>
+            )}
 
-                )
-            })}
-            <div onClick={(e) => modalHandler(e)}>
-                {modal && <ModalGallery id={modalImage.id} url={modalImage.url} />}
-            </div>
-        </section>
 
+        </React.Fragment>
 
     )
 }
