@@ -9,7 +9,7 @@ import Footer from './Footer/Footer';
 import Contact from './Contact/Contact';
 import Gallery from './Gallery/Gallery';
 import About from './About/About';
-import Offers from './Offers/Offers';
+import FamilyDance from './Offers/FamilyDance';
 
 const RoyalDance: React.FC = () => {
   return (
@@ -20,8 +20,8 @@ const RoyalDance: React.FC = () => {
         <Route path="/onas">
           <About />
         </Route>
-        <Route path="/oferta">
-          <Offers />
+        <Route path="/taniec-rekreacyjny">
+          <FamilyDance />
         </Route>
         <Route path="/galeria">
           <Gallery />

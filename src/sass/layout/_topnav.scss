@@ -34,7 +34,7 @@
 .topnav-menu {
   flex: 70%;
   text-align: center;
-  a {
+  > * {
     color: $blackFontColor;
     padding: 0 2.5rem 0 2.5rem;
     background: linear-gradient(
@@ -49,6 +49,37 @@
       background-position: left;
       color: $whiteFontColor;
       text-decoration: none;
+    }
+  }
+
+  .dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    &:hover {
+      .dropdown__menu {
+        display: flex;
+      }
+    }
+  }
+
+  .dropdown__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    z-index: 90;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.143);
+    background-color: rgba(0, 0, 0, 0.564);
+    a {
+      color: rgba(255, 255, 255, 0.802);
+      padding: 1.2rem;
+      font-size: 1.5rem;
+      &:hover {
+        text-decoration: none;
+        color: $supplementaryFontColor;
+      }
     }
   }
 }
