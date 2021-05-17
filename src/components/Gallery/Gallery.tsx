@@ -8,7 +8,7 @@ import Loading from '../utilities/Loading';
 
 const Gallery: React.FC = () => {
 
-    //type or interface
+    //type or interfaces
     type ImageObject = {
         id: number,
         category?: string,
@@ -31,10 +31,10 @@ const Gallery: React.FC = () => {
 
     //change image function
     const anotherImage = (sign: number) => {
-        let newImage = imagesData.images.filter((x) => x.id === modalImage.id + sign)
-        setModalImage(newImage[0])
+        let filterImage: any = imagesData.images.filter((x) => x.id === modalImage.id + sign)
+        let newImageIndex: number = imagesData.images.indexOf(filterImage[0])
+        setModalImage(imagesData.images[newImageIndex])
     }
-
 
     //open modal
     const openModalHandler = (image: ImageObject) => {
@@ -48,10 +48,10 @@ const Gallery: React.FC = () => {
         if (e.target.className === "modal-container" || e.target.className === "x-icon") {
             setModal(false)
         }
-        if (e.target.className === "next-icon" && modalImage.id < imagesData.images.length) {
+        if (e.target.className === "next-icon" && imagesData.images.indexOf(modalImage) < imagesData.images.length - 1) {
             anotherImage(plusSign);
         }
-        if (e.target.className === "prev-icon" && modalImage.id !== 1) {
+        if (e.target.className === "prev-icon" && imagesData.images.indexOf(modalImage) >= 1) {
             anotherImage(minusSign);
         }
     }
@@ -61,13 +61,13 @@ const Gallery: React.FC = () => {
         window.onkeydown = (e: any) => {
             switch (e.keyCode) {
                 case 39:
-                    if (modalImage.id < imagesData.images.length) {
+                    if (imagesData.images.indexOf(modalImage) < imagesData.images.length) {
                         anotherImage(plusSign);
                     }
                     break;
 
                 case 37:
-                    if (modalImage.id !== 1) {
+                    if (imagesData.images.indexOf(modalImage) >= 1) {
                         anotherImage(minusSign);
                     }
                     break;
