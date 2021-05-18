@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { StringifyOptions } from 'node:querystring';
 
 
 interface Props {
@@ -40,15 +41,38 @@ const Menu: React.FC<Props> = ({ ...props }) => {
             : (targetMenuFast.textContent = 'Menu');
     };
 
-    const getIDHandler = (word: string | null) => {
+    const getIDHandler = (word: string | undefined) => {
         let newWord: any
-        if (word !== null) {
+        if (word) {
             newWord = word.split(" ")[0]
-        } else {
-            newWord = word
+            return newWord
         }
-        return newWord
+
     }
+
+    let data = Object.values(props.menu)
+    const loopObject = data.map((item, key) => {
+        return (
+            <h4 className='titles-container__subtitle'>
+                <Link
+                    key={key}
+                    to={getIDHandler(item)}
+                    duration={650}
+                    spy={true}
+                    smooth={true}
+                    offset={-225}
+                    onClick={displayFastMenu}
+                >
+                    {item}
+                </Link>
+            </h4>
+        )
+    })
+
+
+
+
+
 
     return (
         <React.Fragment>
@@ -62,80 +86,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
           </section>
                 <div className='titles-container__menu-nav'>
                     <div className='titles-container__menu-nav-card'>
-                        <h4 className='titles-container__subtitle'>
-                            <Link
-                                to={getIDHandler(props.menu.latino ? props.menu.latino : null)}
-                                duration={650}
-                                spy={true}
-                                smooth={true}
-                                offset={-225}
-                                onClick={displayFastMenu}
-                            >
-                                {props.menu.latino}
-                            </Link>
-                        </h4>
-                        <h4 className='titles-container__subtitle'>
-                            <Link
-                                to={getIDHandler(props.menu.standard ? props.menu.standard : null)}
-                                duration={650}
-                                spy={true}
-                                smooth={true}
-                                offset={-225}
-                                onClick={displayFastMenu}
-                            >
-                                {props.menu.standard}
-                            </Link>
-                        </h4>
-                        <h4 className='titles-container__subtitle'>
-                            <Link
-                                to={getIDHandler(props.menu.kids ? props.menu.kids : null)}
-                                duration={650}
-                                spy={true}
-                                smooth={true}
-                                offset={-225}
-                                onClick={displayFastMenu}
-                            >
-                                {props.menu.kids}
-                            </Link>
-                        </h4>
-                        <h4 className='titles-container__subtitle'>
-                            <Link
-                                to={getIDHandler(props.menu.wedding ? props.menu.wedding : null)}
-                                duration={650}
-                                spy={true}
-                                smooth={true}
-                                offset={-225}
-                                onClick={displayFastMenu}
-                            >
-                                {props.menu.wedding}
-                            </Link>
-                        </h4>
-
-                        <h4 className='titles-container__subtitle'>
-                            <Link
-                                to={getIDHandler(props.menu.proAM ? props.menu.proAM : null)}
-                                duration={650}
-                                spy={true}
-                                smooth={true}
-                                offset={-225}
-                                onClick={displayFastMenu}
-                            >
-                                {props.menu.proAM}
-                            </Link>
-                        </h4>
-                        <h4 className='titles-container__subtitle'>
-                            <Link
-                                to={getIDHandler(props.menu.ballet ? props.menu.ballet : null)}
-                                duration={650}
-                                spy={true}
-                                smooth={true}
-                                offset={-225}
-                                onClick={displayFastMenu}
-                            >
-                                {props.menu.ballet}
-                            </Link>
-                        </h4>
-
+                        {loopObject}
                     </div>
                 </div>
 

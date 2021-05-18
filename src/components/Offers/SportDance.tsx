@@ -10,14 +10,13 @@ import offerData from "../../offerData.json"
 
 
 const SportDance: React.FC = () => {
-    const getIDHandler = (word: string) => {
-        let newWord
-        if (word.includes(" ")) {
+    const getIDHandler = (word: string | undefined) => {
+        let newWord: any
+        if (word) {
             newWord = word.split(" ")[0]
-        } else {
-            newWord = word
+            return newWord
         }
-        return newWord
+
     }
 
     return (

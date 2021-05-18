@@ -30,7 +30,7 @@ const TopNav: React.FC = () => {
                     <span className='nav-icon__span nav-icon__span-third'></span>
                 </div>
             </section>
-            {modal ? <div onClick={closeModal}><ModalNav /> </div> : (<React.Fragment>
+            {modal ? <ModalNav closeNavModal={closeModal} /> : (<React.Fragment>
                 <section className="topnav-logo">
                     <Link to="/"><img src={Logo} alt="logo" /></Link>
                 </section>
@@ -48,8 +48,8 @@ const TopNav: React.FC = () => {
                     <Link to="/kontakt">Kontakt</Link>
                 </section>
                 <section className="topnav-socialmedia">
-                    <Link to="/"><img src={Facebook} alt="facebook" /></Link>
-                    <Link to="/"><img src={Instagram} alt="instagram" /></Link>
+                    <a href="https://www.facebook.com/royaldanceszczecin" target="_blank" ><img src={Facebook} alt="facebook" /></a>
+                    <a href="https://www.instagram.com/royaldanceszczecin/" target="_blank"  ><img src={Instagram} alt="instagram" /></a>
                 </section>
             </React.Fragment>
 

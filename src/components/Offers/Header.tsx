@@ -12,6 +12,7 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
 ({
 
     root: {
+        position: "relative",
         display: 'flex',
         justifyContent: "center",
         alignItems: "start",
