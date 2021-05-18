@@ -17,6 +17,14 @@ const TopNav: React.FC = () => {
 
     const closeModal = () => {
         setModal(false);
+        scrollUp()
+    }
+
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 
     return (
@@ -35,17 +43,17 @@ const TopNav: React.FC = () => {
                     <Link to="/"><img src={Logo} alt="logo" /></Link>
                 </section>
                 <section className="topnav-menu">
-                    <Link to="/onas">O Nas</Link>
+                    <Link to="/onas" onClick={scrollUp}>O Nas</Link>
                     <div className="dropdown">
                         <span className="dropdown__button">Oferta</span>
                         <div className="dropdown__menu" >
-                            <Link to="/taniec-rekreacyjny">Taniec rekreacyjny</Link>
-                            <Link to="/taniec-sportowy">Taniec sportowy</Link>
-                            <Link to="/wynajem-studia">Wynajem sali</Link>
+                            <Link to="/taniec-rekreacyjny" onClick={scrollUp}>Taniec rekreacyjny</Link>
+                            <Link to="/taniec-sportowy" onClick={scrollUp}>Taniec sportowy</Link>
+                            <Link to="/wynajem-studia" onClick={scrollUp}>Wynajem sali</Link>
                         </div>
                     </div>
-                    <Link to="/galeria">Galeria</Link>
-                    <Link to="/kontakt">Kontakt</Link>
+                    <Link to="/galeria" onClick={scrollUp}>Galeria</Link>
+                    <Link to="/kontakt" onClick={scrollUp}>Kontakt</Link>
                 </section>
                 <section className="topnav-socialmedia">
                     <a href="https://www.facebook.com/royaldanceszczecin" target="_blank" ><img src={Facebook} alt="facebook" /></a>
