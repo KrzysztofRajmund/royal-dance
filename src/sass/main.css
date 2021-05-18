@@ -603,6 +603,7 @@ body {
 }
 
 .modalNav {
+  z-index: 90;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   font-size: 2.2rem;
@@ -668,10 +669,10 @@ body {
           justify-content: center;
 }
 
-.modalNav .modal-menu a {
-  margin: 1.2rem 0;
+.modalNav .modal-menu > * {
   color: #2b2b2b;
   padding: 0 2.5rem 0 2.5rem;
+  margin: 2rem;
   background: linear-gradient(60deg, #d7bd78 50%, #fff 50%);
   background-size: 250%;
   background-position: right;
@@ -679,10 +680,48 @@ body {
   transition: 0.4s ease-out;
 }
 
-.modalNav .modal-menu a:hover {
+.modalNav .modal-menu > *:hover {
   background-position: left;
   color: #fff;
   text-decoration: none;
+}
+
+.modalNav .modal-menu .dropdown {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.modalNav .modal-menu .dropdown:hover .dropdown__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modalNav .modal-menu .dropdown__menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 32px;
+  left: 0px;
+  z-index: 90;
+  -webkit-box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.143);
+          box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.143);
+  background-color: rgba(0, 0, 0, 0.564);
+}
+
+.modalNav .modal-menu .dropdown__menu a {
+  color: rgba(255, 255, 255, 0.802);
+  padding: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.modalNav .modal-menu .dropdown__menu a:hover {
+  text-decoration: none;
+  color: #d7bd78;
 }
 
 .modalNav .modal-socialmedia {
@@ -1274,7 +1313,7 @@ body {
   position: absolute;
   bottom: 140px;
   background-color: transparent;
-  z-index: 90;
+  z-index: 5;
 }
 
 .titles-container__menu-nav {

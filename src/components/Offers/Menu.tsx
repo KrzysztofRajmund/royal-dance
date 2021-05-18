@@ -9,9 +9,9 @@ import 'aos/dist/aos.css';
 interface Props {
 
     menu: {
-        latino: string,
-        standard: string,
-        kids: string,
+        latino?: string,
+        standard?: string,
+        kids?: string,
         wedding?: string,
         proAM?: string,
         ballet?: string
@@ -40,8 +40,13 @@ const Menu: React.FC<Props> = ({ ...props }) => {
             : (targetMenuFast.textContent = 'Menu');
     };
 
-    const getIDHandler: any = (word: any) => {
-        let newWord = word.split(" ")[0];
+    const getIDHandler = (word: string | null) => {
+        let newWord: any
+        if (word !== null) {
+            newWord = word.split(" ")[0]
+        } else {
+            newWord = word
+        }
         return newWord
     }
 
@@ -59,7 +64,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                     <div className='titles-container__menu-nav-card'>
                         <h4 className='titles-container__subtitle'>
                             <Link
-                                to={getIDHandler(props.menu.latino)}
+                                to={getIDHandler(props.menu.latino ? props.menu.latino : null)}
                                 duration={650}
                                 spy={true}
                                 smooth={true}
@@ -71,7 +76,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                         </h4>
                         <h4 className='titles-container__subtitle'>
                             <Link
-                                to='adults'
+                                to={getIDHandler(props.menu.standard ? props.menu.standard : null)}
                                 duration={650}
                                 spy={true}
                                 smooth={true}
@@ -83,7 +88,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                         </h4>
                         <h4 className='titles-container__subtitle'>
                             <Link
-                                to='kids'
+                                to={getIDHandler(props.menu.kids ? props.menu.kids : null)}
                                 duration={650}
                                 spy={true}
                                 smooth={true}
@@ -95,7 +100,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                         </h4>
                         <h4 className='titles-container__subtitle'>
                             <Link
-                                to='wedding'
+                                to={getIDHandler(props.menu.wedding ? props.menu.wedding : null)}
                                 duration={650}
                                 spy={true}
                                 smooth={true}
@@ -103,6 +108,31 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                                 onClick={displayFastMenu}
                             >
                                 {props.menu.wedding}
+                            </Link>
+                        </h4>
+
+                        <h4 className='titles-container__subtitle'>
+                            <Link
+                                to={getIDHandler(props.menu.proAM ? props.menu.proAM : null)}
+                                duration={650}
+                                spy={true}
+                                smooth={true}
+                                offset={-225}
+                                onClick={displayFastMenu}
+                            >
+                                {props.menu.proAM}
+                            </Link>
+                        </h4>
+                        <h4 className='titles-container__subtitle'>
+                            <Link
+                                to={getIDHandler(props.menu.ballet ? props.menu.ballet : null)}
+                                duration={650}
+                                spy={true}
+                                smooth={true}
+                                offset={-225}
+                                onClick={displayFastMenu}
+                            >
+                                {props.menu.ballet}
                             </Link>
                         </h4>
 

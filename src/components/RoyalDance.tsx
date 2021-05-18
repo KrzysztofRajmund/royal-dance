@@ -10,6 +10,8 @@ import Contact from './Contact/Contact';
 import Gallery from './Gallery/Gallery';
 import About from './About/About';
 import FamilyDance from './Offers/FamilyDance';
+import SportDance from './Offers/SportDance';
+import Rental from './Offers/Rental';
 
 const RoyalDance: React.FC = () => {
   return (
@@ -22,6 +24,12 @@ const RoyalDance: React.FC = () => {
         </Route>
         <Route path="/taniec-rekreacyjny">
           <FamilyDance />
+        </Route>
+        <Route path="/taniec-sportowy">
+          <SportDance />
+        </Route>
+        <Route path="/wynajem-studia">
+          <Rental />
         </Route>
         <Route path="/galeria">
           <Gallery />

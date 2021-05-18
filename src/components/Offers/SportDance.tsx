@@ -1,6 +1,6 @@
 import React from 'react';
 //assets
-import Image from "../../assets/familydance.jpg"
+import Image from "../../assets/sportdance.jpg"
 //components
 import Offers from './Offers';
 import OffersTwo from './OffersTwo';
@@ -9,7 +9,7 @@ import offerData from "../../offerData.json"
 
 
 
-const FamilyDance: React.FC = () => {
+const SportDance: React.FC = () => {
     const getIDHandler = (word: string) => {
         let newWord
         if (word.includes(" ")) {
@@ -24,12 +24,12 @@ const FamilyDance: React.FC = () => {
 
 
         <>
-            <Header image={Image} title="Taniec rekreacyjny" desc="opis opis" menu={{ latino: "Latino Ladies", standard: "Kurs tańca dla dorosłych", kids: "Kids mix taneczny", wedding: "Pierwszy taniec" }} />
+            <Header image={Image} title="Taniec sportowy" desc="opis opis" menu={{ latino: "Latyno-Amerykańskie", standard: "Tańce standardowe", kids: "Kids-Sport", proAM: "System Pro-Am", ballet: "Balet" }} />
             {offerData.offer.map((item) => {
-                if (item.category === "taniecrekreacyjny" && offerData.offer.indexOf(item) % 2 === 0) {
+                if (item.category === "taniecsportowy" && offerData.offer.indexOf(item) % 2 === 0) {
                     return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />
                 }
-                if (item.category === "taniecrekreacyjny" && offerData.offer.indexOf(item) % 2 === 1) {
+                if (item.category === "taniecsportowy" && offerData.offer.indexOf(item) % 2 === 1) {
                     return <OffersTwo id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />
                 }
             })}
@@ -38,4 +38,4 @@ const FamilyDance: React.FC = () => {
     )
 }
 
-export default FamilyDance;
+export default SportDance;

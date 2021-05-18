@@ -62,6 +62,13 @@
             "title": "Balet",
             "subtitle": "Balet sportowy",
             "desc": "W naszej szkole oferujemy profesjonalny kurs tańca również sportowego."
+        },
+        {
+            "id": 10,
+            "category": "wynajem",
+            "title": "Wynajem Studia",
+            "subtitle": "Wynajem studia dla osób prywatnych i firm",
+            "desc": "Wynajem studia....W celu otrzymania indywidualnej oferty wynajmu prosze o kontakt telefoniczny."
         }
     ]
 }

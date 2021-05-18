@@ -16,7 +16,14 @@ const ModalNav: React.FC = () => {
             </section>
             <section className="modal-menu">
                 <Link to="/onas">O Nas</Link>
-                <Link to="/oferta">Oferta</Link>
+                <div className="dropdown">
+                    <span className="dropdown__button">Oferta</span>
+                    <div className="dropdown__menu" >
+                        <Link to="/taniec-rekreacyjny">Taniec rekreacyjny</Link>
+                        <Link to="/taniec-sportowy">Taniec sportowy</Link>
+                        <Link to="/wynajem-studia">Wynajem sali</Link>
+                    </div>
+                </div>
                 <Link to="/galeria">Galeria</Link>
                 <Link to="/kontakt">Kontakt</Link>
             </section>

@@ -75,9 +75,9 @@ interface Props {
     title: string,
     desc: string,
     menu: {
-        latino: string,
-        standard: string,
-        kids: string,
+        latino?: string,
+        standard?: string,
+        kids?: string,
         wedding?: string,
         proAM?: string,
         ballet?: string

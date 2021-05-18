@@ -41,7 +41,7 @@ const TopNav: React.FC = () => {
                         <div className="dropdown__menu" >
                             <Link to="/taniec-rekreacyjny">Taniec rekreacyjny</Link>
                             <Link to="/taniec-sportowy">Taniec sportowy</Link>
-                            <Link to="/wynajem-sali">Wynajem sali</Link>
+                            <Link to="/wynajem-studia">Wynajem sali</Link>
                         </div>
                     </div>
                     <Link to="/galeria">Galeria</Link>
