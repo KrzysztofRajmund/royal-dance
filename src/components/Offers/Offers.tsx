@@ -3,16 +3,17 @@ import React from 'react';
 import Logo2 from "../../assets/logo2.png"
 
 interface Props {
+    id: string,
     title: string,
     subtitle: string,
     desc: string
 }
 
-const Offers: React.FC<Props> = ({ title, subtitle, desc }) => {
+const Offers: React.FC<Props> = ({ id, title, subtitle, desc }) => {
 
     return (
         <section className="cards-container offers">
-            <article>
+            <article id={id}>
                 <div className="cards-content">
                     <h1><img src={Logo2} alt="logo" /></h1>
                     <h1>{title}</h1>

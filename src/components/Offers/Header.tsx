@@ -74,7 +74,15 @@ interface Props {
     image: string,
     title: string,
     desc: string,
-    menu: object
+    menu: {
+        latino: string,
+        standard: string,
+        kids: string,
+        wedding?: string,
+        proAM?: string,
+        ballet?: string
+
+    }
 }
 
 const Header: React.FC<Props> = ({ ...props }) => {

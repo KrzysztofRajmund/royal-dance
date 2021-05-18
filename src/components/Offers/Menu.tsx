@@ -8,7 +8,14 @@ import 'aos/dist/aos.css';
 
 interface Props {
 
-    menu: object
+    menu: {
+        latino: string,
+        standard: string,
+        kids: string,
+        wedding?: string,
+        proAM?: string,
+        ballet?: string
+    }
 }
 
 const Menu: React.FC<Props> = ({ ...props }) => {
@@ -32,6 +39,12 @@ const Menu: React.FC<Props> = ({ ...props }) => {
             ? (targetMenuFast.textContent = 'Zamknij')
             : (targetMenuFast.textContent = 'Menu');
     };
+
+    const getIDHandler: any = (word: any) => {
+        let newWord = word.split(" ")[0];
+        return newWord
+    }
+
     return (
         <React.Fragment>
             <article className='titles-container titles-container__nav-sticky'>
@@ -46,7 +59,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                     <div className='titles-container__menu-nav-card'>
                         <h4 className='titles-container__subtitle'>
                             <Link
-                                to='latino'
+                                to={getIDHandler(props.menu.latino)}
                                 duration={650}
                                 spy={true}
                                 smooth={true}
@@ -65,8 +78,8 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                                 offset={-225}
                                 onClick={displayFastMenu}
                             >
-                                Kurs tańca dla dorosłych
-                </Link>
+                                {props.menu.standard}
+                            </Link>
                         </h4>
                         <h4 className='titles-container__subtitle'>
                             <Link
@@ -77,8 +90,8 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                                 offset={-225}
                                 onClick={displayFastMenu}
                             >
-                                Kids mix taneczny
-                </Link>
+                                {props.menu.kids}
+                            </Link>
                         </h4>
                         <h4 className='titles-container__subtitle'>
                             <Link
@@ -89,8 +102,8 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                                 offset={-225}
                                 onClick={displayFastMenu}
                             >
-                                Pierwszy taniec
-                </Link>
+                                {props.menu.wedding}
+                            </Link>
                         </h4>
 
                     </div>

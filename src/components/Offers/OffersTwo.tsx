@@ -3,18 +3,17 @@ import React from 'react';
 import Logo2 from "../../assets/logo2.png"
 
 interface Props {
+    id: string,
     title: string,
     subtitle: string,
     desc: string
 }
 
-const OffersTwo: React.FC<Props> = ({ title, subtitle, desc }) => {
+const OffersTwo: React.FC<Props> = ({ id, title, subtitle, desc }) => {
 
     return (
-
-
         <section className="cards-container offers">
-            <article>
+            <article id={id}>
                 <div className="cards-subcontent">
                     <p className="cards-subcontent-title">{subtitle}</p>
                     <br />
