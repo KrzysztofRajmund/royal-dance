@@ -60,7 +60,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                     duration={650}
                     spy={true}
                     smooth={true}
-                    offset={-225}
+                    offset={-150}
                     onClick={displayFastMenu}
                 >
                     {item}

@@ -22,7 +22,7 @@ const OffersTwo: React.FC<Props> = ({ id, title, subtitle, desc }) => {
                 </div>
                 <div className="cards-content">
                     <h1><img src={Logo2} alt="logo" /></h1>
-                    <h1>{title}</h1>
+                    <h1 className="offers-title">{title}</h1>
                 </div>
             </article>
         </section>

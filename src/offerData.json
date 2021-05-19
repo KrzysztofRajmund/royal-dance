@@ -10,7 +10,7 @@
         {
             "id": 2,
             "category": "taniecrekreacyjny",
-            "title": "Kurs tańca dla dorosłych",
+            "title": "Kurs dla dorosłych",
             "subtitle": "Taniec dla wszystkich",
             "desc": "W naszej szkole oferujemy profesjonalny kurs tańca towarzyskiego dla dorosłych, jak i tańce indywidualne."
         },
@@ -52,7 +52,7 @@
         {
             "id": 8,
             "category": "taniecsportowy",
-            "title": "System Pro-Am",
+            "title": "Pro-Am",
             "subtitle": "Taniec towarzyski z profesjonalnym partnerem tanecznym",
             "desc": "W naszej szkole oferujemy profesjonalny kurs tańca również sportowego."
         },

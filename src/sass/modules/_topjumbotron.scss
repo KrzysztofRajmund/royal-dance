@@ -21,12 +21,11 @@
     padding: 6rem 1rem 9rem 1rem;
     h1 {
       font-weight: 600;
-      font-size: 5rem;
+      font-size: 8rem;
       letter-spacing: 0.5rem;
     }
-    h3 {
-      font-size: $paragraphFontSize;
-      letter-spacing: 0.3rem;
+    h5 {
+      font-size: 1.55rem;
     }
   }
 }
@@ -69,8 +68,60 @@
   font-size: 14px;
   letter-spacing: 1em;
   text-transform: uppercase;
-  padding-right: 35px;
+  padding-left: 1rem;
 }
 .entrance-page__wrapper--animation .letter {
   display: inline-block;
+}
+
+.entrance-page__wrapper--title .letter {
+  display: inline-block;
+}
+
+@media screen and (max-width: 615px) {
+  .topjumbotron-container {
+    article {
+      top: 35%;
+      h1 {
+        font-size: 4.8rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+      h5 {
+        font-size: 1rem;
+        padding-right: 2rem;
+        padding-left: 2.9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .topjumbotron-container {
+    article {
+      h1 {
+        font-size: 4.4rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
+      }
+      h5 {
+        font-size: 0.8rem;
+        padding-right: 1rem;
+        padding-left: 1.45rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .topjumbotron-container {
+    article {
+      h1 {
+        font-size: 3.8rem;
+      }
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

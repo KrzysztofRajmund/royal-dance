@@ -21,9 +21,9 @@ const useStyles = makeStyles<Theme, Props>((theme) =>
         height: "60vh",
         width: "100vw",
         margin: "0",
-        [theme.breakpoints.down(450)]: {
-            height: "100%",
-        },
+        // [theme.breakpoints.down(450)]: {
+        //     height: "100%",
+        // },
 
     },
     paperCard: {
@@ -113,7 +113,28 @@ const Header: React.FC<Props> = ({ ...props }) => {
             translateZ: 0,
             opacity: [0, 1],
             easing: 'easeOutExpo',
-            duration: 4000,
+            duration: 6000,
+            delay: (el, i) => 3000 + 30 * i,
+        });
+    }
+
+    if (loading) {
+        var textWrapper: any = document.querySelector(
+            '.entrance-page__wrapper--title'
+        );
+        const regex = /\S/g;
+        textWrapper.innerHTML = textWrapper.textContent.replace(
+            regex,
+            "<span class='letter'>$&</span>"
+        );
+
+        anime.timeline({ loop: false }).add({
+            targets: '.entrance-page__wrapper--title .letter',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 6000,
             delay: (el, i) => 500 + 30 * i,
         });
     }
@@ -132,11 +153,10 @@ const Header: React.FC<Props> = ({ ...props }) => {
             <Paper square variant="outlined" className={classes.paperCard}>
                 <div className="header-container">
                     <article>
-                        <div className='entrance-page__wrapper'>
-                            <h1 >  {props.title}</h1>
+                        <div className='entrance-page__wrapper '>
+                            <h1 className='entrance-page__wrapper--title' >  {props.title}</h1>
                             <h5 className='entrance-page__wrapper--animation'>
-                                {' '}
-                                {props.desc}
+                                {props.desc.length >= 20 && window.innerWidth < 445 ? "" : props.desc}
                             </h5>
                         </div>
                     </article>

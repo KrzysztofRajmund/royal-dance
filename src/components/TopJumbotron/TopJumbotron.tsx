@@ -29,20 +29,20 @@ const TopJumbotron: React.FC = () => {
             delay: (el, i) => 500 + 30 * i,
         });
     }
+    let subtitle = "szczecińska szkoła tańca"
     return (
 
 
         <section className="topjumbotron-container">
             <div className="topjumbotron-img">
                 <article>
-                    {/* <h1>Szczecińska Szkoła Tańca</h1>
-                    <h3>Lelewela 8a, Szczecin</h3> */}
+
                     <div className='entrance-page__wrapper'>
                         <h1 >Royal Dance</h1>
                         <h5 className='entrance-page__wrapper--animation'>
-                            {' '}
-            szczecińska szkoła tańca
-          </h5>
+                            {subtitle.length >= 20 && window.innerWidth < 365 ? "szkoła tańca" : subtitle}
+
+                        </h5>
                     </div>
                 </article>
             </div>

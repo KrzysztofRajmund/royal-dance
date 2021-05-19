@@ -87,13 +87,12 @@ body {
 
 .topjumbotron-container article h1 {
   font-weight: 600;
-  font-size: 5rem;
+  font-size: 8rem;
   letter-spacing: 0.5rem;
 }
 
-.topjumbotron-container article h3 {
-  font-size: 1.6rem;
-  letter-spacing: 0.3rem;
+.topjumbotron-container article h5 {
+  font-size: 1.55rem;
 }
 
 .topjumbotron-img {
@@ -148,11 +147,53 @@ body {
   font-size: 14px;
   letter-spacing: 1em;
   text-transform: uppercase;
-  padding-right: 35px;
+  padding-left: 1rem;
 }
 
 .entrance-page__wrapper--animation .letter {
   display: inline-block;
+}
+
+.entrance-page__wrapper--title .letter {
+  display: inline-block;
+}
+
+@media screen and (max-width: 615px) {
+  .topjumbotron-container article {
+    top: 35%;
+  }
+  .topjumbotron-container article h1 {
+    font-size: 4.8rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .topjumbotron-container article h5 {
+    font-size: 1rem;
+    padding-right: 2rem;
+    padding-left: 2.9rem;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .topjumbotron-container article h1 {
+    font-size: 4.4rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+  .topjumbotron-container article h5 {
+    font-size: 0.8rem;
+    padding-right: 1rem;
+    padding-left: 1.45rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .topjumbotron-container article h1 {
+    font-size: 3.8rem;
+  }
+  .topjumbotron-container article h5 {
+    font-size: 1.2rem;
+  }
 }
 
 .cards-container {
@@ -729,6 +770,7 @@ body {
 }
 
 .modalNav .modal-menu .dropdown__menu a {
+  text-align: center;
   color: rgba(255, 255, 255, 0.802);
   padding: 1.2rem;
   font-size: 1.5rem;
@@ -1291,9 +1333,13 @@ body {
 }
 
 .offers article .cards-content h1 img {
-  width: 150px;
+  width: 100px;
   height: auto;
   opacity: 0.6;
+}
+
+.offers article .cards-content .offers-title {
+  font-size: 3.5rem;
 }
 
 .titles-container {
@@ -1413,6 +1459,14 @@ body {
 .header-container h5 {
   text-align: right;
   padding-right: 10%;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1170px) {
+  .offers article .cards-content .offers-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
 }
 
 @media screen and (max-width: 1140px) {
@@ -1435,6 +1489,13 @@ body {
   }
   .titles-container__menu-nav .titles-container__menu-nav-card .titles-container__subtitle {
     min-width: 120px;
+  }
+  .offers article .cards-content {
+    padding: 8rem 2rem 4rem 2rem;
+  }
+  .offers article .cards-content .offers-title {
+    font-size: 2.2rem;
+    font-weight: 600;
   }
 }
 
@@ -1476,6 +1537,40 @@ body {
   }
   .titles-container.titles-container__nav-sticky .titles-container__menu-nav.active .titles-container__menu-nav-card h4:first-child {
     margin-top: 0px;
+  }
+  .header-container h1 {
+    font-size: 3.5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+  .header-container h5 {
+    font-size: 1.2rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .header-container h1 {
+    font-size: 2.8rem;
+    padding-left: 5rem;
+  }
+  .header-container h5 {
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-container h1 {
+    font-size: 2.4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    line-height: 3rem;
+  }
+  .header-container h5 {
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
