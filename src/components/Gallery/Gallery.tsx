@@ -81,15 +81,18 @@ const Gallery: React.FC = () => {
         <React.Fragment>
             { loading ? <Loading /> : (
                 <section className="gallery">
+                    <h1>Nasze studio</h1>
+                    <div className="gallery-images">
 
-                    {imagesData.images.map((image) => {
-                        return (
-                            <div key={image.id} className="gallery-image" onClick={() => openModalHandler(image)}>
-                                <img src={image.url} alt={`image-${image.id}`} />
-                            </div>
+                        {imagesData.images.map((image) => {
+                            return (
+                                <div key={image.id} className="gallery-image" onClick={() => openModalHandler(image)}>
+                                    <img src={image.url} alt={`image-${image.id}`} />
+                                </div>
 
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
                     <div onClick={(e) => modalHandler(e)}>
                         {modal && <ModalGallery id={modalImage.id} url={modalImage.url} />}
                     </div>

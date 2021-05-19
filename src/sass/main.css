@@ -56,6 +56,7 @@ body {
   width: 100vw;
   height: 88vh;
   padding: 0 0rem 5rem 0rem;
+  margin: 0 0 0.5rem 0;
   text-transform: uppercase;
   color: #fff;
 }
@@ -304,15 +305,7 @@ body {
 }
 
 .slider-one {
-  background-image: url("../assets/img1.jpg");
-}
-
-.slider-two {
-  background-image: url("../assets/img2.jpg");
-}
-
-.slider-three {
-  background-image: url("../assets/img3.jpg");
+  background-image: url("../assets/slide1.jpg");
 }
 
 .cards-slider.expand {
@@ -432,7 +425,7 @@ body {
   }
   .cards-slider {
     min-height: 60vh;
-    background-color: #2b2b2b;
+    background-color: transparent;
   }
   .slider {
     min-height: 60vh;
@@ -1209,9 +1202,20 @@ body {
   color: #d7bd78;
 }
 
-.gallery {
+.gallery h1 {
+  font-family: "Poppins", sans-serif;
+  line-height: 6rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  padding: 7rem 0rem 0rem 4rem;
+}
+
+.gallery .gallery-images {
   position: relative;
-  padding: 5rem 4rem 5rem 4rem;
+  padding: 0rem 4rem 5rem 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1226,7 +1230,7 @@ body {
       flex-wrap: wrap;
 }
 
-.gallery .gallery-image {
+.gallery .gallery-images .gallery-image {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
@@ -1235,7 +1239,7 @@ body {
   cursor: pointer;
 }
 
-.gallery .gallery-image img {
+.gallery .gallery-images .gallery-image img {
   width: 100%;
   height: 100%;
 }
@@ -1297,7 +1301,7 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .gallery .gallery-image {
+  .gallery .gallery-images .gallery-image {
     -webkit-box-flex: 33.33%;
         -ms-flex: 33.33%;
             flex: 33.33%;
@@ -1306,7 +1310,10 @@ body {
 }
 
 @media screen and (max-width: 540px) {
-  .gallery .gallery-image {
+  .gallery h1 {
+    font-size: 2.5rem;
+  }
+  .gallery .gallery-images .gallery-image {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
             flex: 50%;

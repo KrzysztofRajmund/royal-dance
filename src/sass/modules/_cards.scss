@@ -83,15 +83,15 @@
 }
 
 .slider-one {
-  background-image: url('../assets/img1.jpg');
+  background-image: url('../assets/slide1.jpg');
 }
-.slider-two {
-  background-image: url('../assets/img2.jpg');
-}
+// .slider-two {
+//   background-image: url('../assets/slide2.jpg');
+// }
 
-.slider-three {
-  background-image: url('../assets/img3.jpg');
-}
+// .slider-three {
+//   background-image: url('../assets/slide4.jpg');
+// }
 
 .cards-slider.expand {
   flex: 66%;
@@ -192,7 +192,7 @@
   }
   .cards-slider {
     min-height: 60vh;
-    background-color: $blackFontColor;
+    background-color: transparent;
   }
 
   .slider {

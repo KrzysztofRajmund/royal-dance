@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 //AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { StringifyOptions } from 'node:querystring';
+
 
 
 interface Props {

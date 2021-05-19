@@ -78,6 +78,7 @@ interface Props {
     image: string,
     title: string,
     desc: string,
+    menuNav: boolean,
     menu: {
         latino?: string,
         standard?: string,
@@ -162,8 +163,8 @@ const Header: React.FC<Props> = ({ ...props }) => {
                     </article>
                 </div>
             </Paper>
+            {props.menuNav && <Menu menu={props.menu} />}
 
-            <Menu menu={props.menu} />
         </div>
     )
 }

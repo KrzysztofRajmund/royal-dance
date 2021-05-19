@@ -26,7 +26,7 @@ const TopJumbotron: React.FC = () => {
             opacity: [0, 1],
             easing: 'easeOutExpo',
             duration: 4000,
-            delay: (el, i) => 500 + 30 * i,
+            delay: (el, i) => 100 + 30 * i,
         });
     }
     let subtitle = "szczecińska szkoła tańca"

@@ -72,9 +72,9 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer, sl
     //useState hooks
     const [count, setCount] = useState<number>(100)
     //slider interval
-    if (window.location.pathname === "/") {
-        sliderInterval(count, sliderFirst);
-    }
+    // if (window.location.pathname === "/") {
+    //     sliderInterval(count, sliderFirst);
+    // }
     //useEffect hooks
     // useEffect(() => {
     //     sliderInterval(count, sliderFirst);
@@ -119,12 +119,12 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer, sl
     return (
         <React.Fragment>
             <button className="slider-buttons show-button" onClick={expandSlider}>show</button>
-            {window.location.pathname === "/" ?
+            {/* {window.location.pathname === "/" ?
                 <>
                     <div className="slider-buttons arrows arrow-right" onClick={nextImageHandler} ><div className="right"></div></div>
                     <div className="slider-buttons arrows arrow-left"><div className="left"></div></div>
                 </> : ""
-            }
+            } */}
 
         </React.Fragment>
     )

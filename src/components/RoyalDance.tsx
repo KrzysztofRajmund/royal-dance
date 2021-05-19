@@ -12,6 +12,10 @@ import About from './About/About';
 import FamilyDance from './Offers/FamilyDance';
 import SportDance from './Offers/SportDance';
 import Rental from './Offers/Rental';
+import GalleryHome from './Gallery/GalleryHome';
+import HeaderHome from './Offers/HeaderHome';
+//assets
+import Image from "./../assets/sportdance.jpg"
 
 const RoyalDance: React.FC = () => {
   return (
@@ -39,7 +43,14 @@ const RoyalDance: React.FC = () => {
         </Route>
         <Route path="/">
           <TopJumbotron />
+          <HeaderHome image={Image} title={window.innerWidth < 380 ? "Tańce" : "Zapisz się na tańce"} desc={(window.innerWidth < 445 ? "Rekreacyjny i Sportowy" : "Taniec rekreacyjny i sportowy") &&
+            (window.innerWidth < 380 ? "w Royal Dance" : "Taniec rekreacyjny i sportowy")} />
+
+
+          <GalleryHome />
+          <About />
           <Cards />
+
         </Route>
 
       </Switch>

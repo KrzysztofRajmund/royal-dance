@@ -24,7 +24,7 @@ const FamilyDance: React.FC = () => {
 
 
         <>
-            <Header image={Image} title="Taniec rekreacyjny" desc="opis opis" menu={{ latino: "Latino Ladies", standard: "Kurs tańca dla dorosłych", kids: "Kids mix taneczny", wedding: "Pierwszy taniec" }} />
+            <Header menuNav={true} image={Image} title="Taniec rekreacyjny" desc="opis opis" menu={{ latino: "Latino Ladies", standard: "Kurs tańca dla dorosłych", kids: "Kids mix taneczny", wedding: "Pierwszy taniec" }} />
             {offerData.offer.map((item) => {
                 if (item.category === "taniecrekreacyjny" && offerData.offer.indexOf(item) % 2 === 0) {
                     return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />
