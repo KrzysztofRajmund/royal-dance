@@ -1,6 +1,6 @@
 import React from 'react';
 //assets
-import Image from "../../assets/rd-gif2.gif"
+import Image from "../../assets/rd-gif.gif"
 //components
 import Offers from './Offers';
 import OffersTwo from './OffersTwo';
