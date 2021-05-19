@@ -23,7 +23,7 @@ const FamilyDance: React.FC = () => {
 
 
         <>
-            <Header image={Image} title="Wynajem Studia" desc="Wynajem studia dla osób prywatnych i firm" menu={{}} />
+            <Header image={Image} title="Wynajem Studia" desc="Dla osób prywatnych i firm" menu={{}} />
             {offerData.offer.map((item) => {
                 if (item.category === "wynajem") {
                     return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />
