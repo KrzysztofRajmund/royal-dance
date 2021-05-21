@@ -43,8 +43,7 @@ const RoyalDance: React.FC = () => {
         </Route>
         <Route path="/">
           <TopJumbotron />
-          <HeaderHome image={Image} title={window.innerWidth < 380 ? "Tańce" : "Zapisz się na tańce"} desc={(window.innerWidth < 445 ? "Rekreacyjny i Sportowy" : "Taniec rekreacyjny i sportowy") &&
-            (window.innerWidth < 380 ? "w Royal Dance" : "Taniec rekreacyjny i sportowy")} />
+          <HeaderHome image={Image} title={window.innerWidth < 380 ? "Taniec" : "Zapisz się na tańce"} desc={(window.innerWidth < 445 ? "Rekreacyjny i Sportowy" : "Taniec rekreacyjny i sportowy")} />
 
 
           <GalleryHome />

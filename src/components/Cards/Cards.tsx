@@ -15,7 +15,7 @@ const Cards: React.FC = () => {
     //useEffect hooks
     useEffect(() => {
         setSliderContainer(document.getElementsByClassName("cards-slider")[0]);
-        setSubcontentContainer(document.getElementsByClassName("cards-subcontent")[0]);
+        setSubcontentContainer(document.getElementsByClassName("cards-subcontent")[1]);
     }, [])
 
     return (

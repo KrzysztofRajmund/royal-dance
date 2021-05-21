@@ -94,6 +94,8 @@ body {
 
 .topjumbotron-container article h5 {
   font-size: 1.55rem;
+  line-height: 2.5rem;
+  margin-top: 1rem;
 }
 
 .topjumbotron-img {
@@ -1323,6 +1325,7 @@ body {
 
 .about article .cards-subcontent {
   text-align: center;
+  display: block;
 }
 
 .about article .cards-content h1 img {
@@ -1466,6 +1469,7 @@ body {
 .header-container h5 {
   text-align: right;
   padding-right: 10%;
+  line-height: 2rem;
   font-size: 1.4rem;
 }
 
