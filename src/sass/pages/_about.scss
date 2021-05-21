@@ -3,6 +3,13 @@
     .cards-subcontent {
       text-align: center;
       display: block;
+      .about-link {
+        color: $supplementaryFontColor;
+        &:hover {
+          text-decoration: none;
+          font-weight: bolder;
+        }
+      }
     }
 
     .cards-content {

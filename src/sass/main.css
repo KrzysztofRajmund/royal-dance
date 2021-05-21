@@ -1328,6 +1328,15 @@ body {
   display: block;
 }
 
+.about article .cards-subcontent .about-link {
+  color: #d7bd78;
+}
+
+.about article .cards-subcontent .about-link:hover {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 .about article .cards-content h1 img {
   width: 150px;
   height: auto;
