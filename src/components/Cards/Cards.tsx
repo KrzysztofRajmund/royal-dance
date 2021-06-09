@@ -43,12 +43,6 @@ const Cards: React.FC = () => {
                         <section className="slider slider-one" id="slider-1">
 
                         </section>
-                        {/* <section className="slider slider-two" id="slider-2">
-
-                        </section>
-                        <section className="slider slider-three" id="slider-3">
-
-                        </section> */}
                     </div>
 
                     <CardsSlider sliderContainer={sliderContainer} subcontentContainer={subcontentContainer} sliderFirst={sliderFirst} />

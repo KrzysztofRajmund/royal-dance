@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // import img1 from "../../assets/img1.jpg";
 // import img2 from "../../assets/img2.jpg";
 // import img3 from "../../assets/img3.jpg";
-//utils
-import sliderInterval from './../utilities/sliderInterval';
 
 interface Props {
     sliderContainer: any,
@@ -68,20 +66,6 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer, sl
 
     // const sliderArray: string[] = [img1, img2, img3];
 
-
-    //useState hooks
-    const [count, setCount] = useState<number>(100)
-    //slider interval
-    // if (window.location.pathname === "/") {
-    //     sliderInterval(count, sliderFirst);
-    // }
-    //useEffect hooks
-    // useEffect(() => {
-    //     sliderInterval(count, sliderFirst);
-    //     console.log(count, sliderFirst)
-    // }, [count])
-
-
     //show button
     const expandSlider = () => {
         sliderContainer.classList.toggle("expand");
@@ -106,26 +90,9 @@ const CardsSlider: React.FC<Props> = ({ sliderContainer, subcontentContainer, sl
             }
         }
     }
-    //nextImage Arrow Handler
-    const nextImageHandler = () => {
-        if (count < 300) {
-            setCount(count + 100)
-        } else {
-            setCount(100)
-        }
-
-    }
-
     return (
         <React.Fragment>
             <button className="slider-buttons show-button" onClick={expandSlider}>show</button>
-            {/* {window.location.pathname === "/" ?
-                <>
-                    <div className="slider-buttons arrows arrow-right" onClick={nextImageHandler} ><div className="right"></div></div>
-                    <div className="slider-buttons arrows arrow-left"><div className="left"></div></div>
-                </> : ""
-            } */}
-
         </React.Fragment>
     )
 }

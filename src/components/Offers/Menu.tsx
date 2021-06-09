@@ -30,10 +30,10 @@ const Menu: React.FC<Props> = ({ ...props }) => {
 
     const displayFastMenu = () => {
         const targetMenuNav = document.getElementsByClassName(
-            'titles-container__menu-nav'
+            'titles-container-menu-spread'
         )[0];
         const targetMenuFast = document.getElementsByClassName(
-            'titles-container__menu-fast'
+            'titles-container-menu'
         )[0];
         targetMenuNav.classList.toggle('active');
         targetMenuFast.textContent === 'Menu'
@@ -53,7 +53,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
     let data = Object.values(props.menu)
     const loopObject = data.map((item, key) => {
         return (
-            <h4 className='titles-container__subtitle'>
+            <h4 className='titles-subtitle'>
                 <Link
                     key={key}
                     to={getIDHandler(item)}
@@ -76,16 +76,16 @@ const Menu: React.FC<Props> = ({ ...props }) => {
 
     return (
         <React.Fragment>
-            <article className='titles-container titles-container__nav-sticky'>
+            <article className='titles-container titles-container-sticky'>
 
                 <section
-                    className='titles-container__menu-fast'
+                    className='titles-container-menu'
                     onClick={displayFastMenu}
                 >
                     Menu
           </section>
-                <div className='titles-container__menu-nav'>
-                    <div className='titles-container__menu-nav-card'>
+                <div className='titles-container-menu-spread'>
+                    <div className='titles-container-menu-spread-card'>
                         {loopObject}
                     </div>
                 </div>

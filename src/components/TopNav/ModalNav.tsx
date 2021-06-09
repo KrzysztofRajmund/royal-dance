@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 //react-router
 import { Link } from "react-router-dom";
 //assets
@@ -14,15 +14,15 @@ const ModalNav: React.FC<Props> = ({ ...props }) => {
     console.log(props)
     return (
 
-        <div className="modalNav">
+        <div className="modalnav">
             <section className="modal-logo">
                 <Link to="/" onClick={props.closeNavModal} ><img src={Logo} alt="logo" /></Link>
             </section>
             <section className="modal-menu">
                 <Link to="/onas" onClick={props.closeNavModal} >O Nas</Link>
                 <div className="dropdown">
-                    <span className="dropdown__button">Oferta</span>
-                    <div className="dropdown__menu" >
+                    <span className="dropdown-button">Oferta</span>
+                    <div className="dropdown-menu" >
                         <Link to="/taniec-rekreacyjny" onClick={props.closeNavModal} >Taniec rekreacyjny</Link>
                         <Link to="/taniec-sportowy" onClick={props.closeNavModal} >Taniec sportowy</Link>
                         <Link to="/wynajem-studia" onClick={props.closeNavModal} >Wynajem sali</Link>
@@ -32,8 +32,8 @@ const ModalNav: React.FC<Props> = ({ ...props }) => {
                 <Link to="/kontakt" onClick={props.closeNavModal} >Kontakt</Link>
             </section>
             <section className="modal-socialmedia">
-                <a href="https://www.facebook.com/royaldanceszczecin" onClick={props.closeNavModal} target="_blank"  ><img src={Facebook} alt="facebook" /></a>
-                <a href="https://www.instagram.com/royaldanceszczecin/" onClick={props.closeNavModal} target="_blank" ><img src={Instagram} alt="instagram" /></a>
+                <a href="https://www.facebook.com/royaldanceszczecin" onClick={props.closeNavModal} target="_blank" rel="noreferrer"  ><img src={Facebook} alt="facebook" /></a>
+                <a href="https://www.instagram.com/royaldanceszczecin/" onClick={props.closeNavModal} target="_blank" rel="noreferrer" ><img src={Instagram} alt="instagram" /></a>
             </section>
         </div>
 

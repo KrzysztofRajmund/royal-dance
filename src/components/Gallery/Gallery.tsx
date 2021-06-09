@@ -87,7 +87,7 @@ const Gallery: React.FC = () => {
                         {imagesData.images.map((image) => {
                             return (
                                 <div key={image.id} className="gallery-image" onClick={() => openModalHandler(image)}>
-                                    <img src={image.url} alt={`image-${image.id}`} />
+                                    <img src={image.url} alt={`gallery-${image.id}`} />
                                 </div>
 
                             )

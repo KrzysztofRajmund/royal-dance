@@ -29,13 +29,13 @@ const TopNav: React.FC = () => {
 
     return (
         <nav className="topnav-container">
-            <section onClick={openModal} className='nav-icon'>
+            <section onClick={openModal} className='navicon'>
                 <div
-                    className={modal ? 'nav-icon__btn active' : 'nav-icon__btn not-active'}
+                    className={modal ? 'navicon-btn active' : 'navicon-btn not-active'}
                 >
-                    <span className=' nav-icon__span nav-icon__span-first'></span>
-                    <span className='nav-icon__span nav-icon__span-second'></span>
-                    <span className='nav-icon__span nav-icon__span-third'></span>
+                    <span className=' navicon-span navicon-span-first'></span>
+                    <span className='navicon-span navicon-span-second'></span>
+                    <span className='navicon-span navicon-span-third'></span>
                 </div>
             </section>
             {modal ? <ModalNav closeNavModal={closeModal} /> : (<React.Fragment>
@@ -45,8 +45,8 @@ const TopNav: React.FC = () => {
                 <section className="topnav-menu">
                     <Link to="/onas" onClick={scrollUp}>O Nas</Link>
                     <div className="dropdown">
-                        <span className="dropdown__button">Oferta</span>
-                        <div className="dropdown__menu" >
+                        <span className="dropdown-button">Oferta</span>
+                        <div className="dropdown-menu" >
                             <Link to="/taniec-rekreacyjny" onClick={scrollUp}>Taniec rekreacyjny</Link>
                             <Link to="/taniec-sportowy" onClick={scrollUp}>Taniec sportowy</Link>
                             <Link to="/wynajem-studia" onClick={scrollUp}>Wynajem sali</Link>
@@ -56,8 +56,8 @@ const TopNav: React.FC = () => {
                     <Link to="/kontakt" onClick={scrollUp}>Kontakt</Link>
                 </section>
                 <section className="topnav-socialmedia">
-                    <a href="https://www.facebook.com/royaldanceszczecin" target="_blank" ><img src={Facebook} alt="facebook" /></a>
-                    <a href="https://www.instagram.com/royaldanceszczecin/" target="_blank"  ><img src={Instagram} alt="instagram" /></a>
+                    <a href="https://www.facebook.com/royaldanceszczecin" target="_blank" rel="noreferrer" ><img src={Facebook} alt="facebook" /></a>
+                    <a href="https://www.instagram.com/royaldanceszczecin/" target="_blank" rel="noreferrer"  ><img src={Instagram} alt="instagram" /></a>
                 </section>
             </React.Fragment>
 

@@ -15,7 +15,7 @@ const ModalGallery: React.FC<Props> = ({ id, url }) => {
 
     return (
         <section className="modal-container">
-            <img className="modal-image" src={url} alt={`image-${id}`} />
+            <img className="modal-image" src={url} alt={`modal-${id}`} />
             <img className="prev-icon" src={prevIcon} alt="prev-icon" />
             <img className="next-icon" src={nextIcon} alt="next-icon" />
             <img className="x-icon" src={xIcon} alt="x-icon" />
