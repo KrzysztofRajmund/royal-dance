@@ -48,7 +48,7 @@ const HeaderHome: React.FC<Props> = ({ ...props }) => {
             offset: 150,
             duration: 1200,
         });
-    }, [AOS]);
+    }, []);
 
 
     if (loading) {

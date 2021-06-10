@@ -32,6 +32,7 @@ const FamilyDance: React.FC = () => {
                 if (item.category === "taniecrekreacyjny" && offerData.offer.indexOf(item) % 2 === 1) {
                     return <OffersTwo id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />
                 }
+                return null;
             })}
         </>
 

@@ -3,7 +3,6 @@ import React from 'react';
 import Image from "../../assets/rental.jpg"
 //components
 import Offers from './Offers';
-import OffersTwo from './OffersTwo';
 import Header from './Header';
 import offerData from "../../offerData.json"
 
@@ -28,7 +27,10 @@ const FamilyDance: React.FC = () => {
                 if (item.category === "wynajem") {
                     return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />
                 }
-            })}
+                return null;
+            }
+
+            )}
         </>
 
     )
