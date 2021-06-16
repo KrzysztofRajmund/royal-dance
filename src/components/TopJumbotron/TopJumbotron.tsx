@@ -29,7 +29,9 @@ const TopJumbotron: React.FC = () => {
         });
     }
 
-    let subtitle = "szczecińska szoła tańca"
+    // let subtitle = "szczecińska szoła tańca"
+    let subtitle = "szoła tańca"
+
     return (
 
 
