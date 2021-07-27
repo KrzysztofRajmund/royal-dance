@@ -52,6 +52,7 @@ const TopNav: React.FC = () => {
                             <Link to="/wynajem-studia" onClick={scrollUp}>Wynajem sali</Link>
                         </div>
                     </div>
+                    <Link to="/cennik" onClick={scrollUp}>Cennik</Link>
                     <Link to="/galeria" onClick={scrollUp}>Galeria</Link>
                     <Link to="/kontakt" onClick={scrollUp}>Kontakt</Link>
                 </section>
