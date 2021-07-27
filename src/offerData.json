@@ -2,6 +2,7 @@
     "offer": [
         {
             "id": 1,
+            "url": "img1.jpg",
             "category": "taniecrekreacyjny",
             "title": "Dla Kobiet",
             "subtitle": "Taniec dla kobiet",
@@ -9,6 +10,7 @@
         },
         {
             "id": 2,
+            "url": "img18.jpg",
             "category": "taniecrekreacyjny",
             "title": "Dla Par",
             "subtitle": "Taniec dla wszystkich",
@@ -16,6 +18,7 @@
         },
         {
             "id": 3,
+            "url": "img29.jpg",
             "category": "taniecrekreacyjny",
             "title": "Dla Dzieci",
             "subtitle": "Mix taneczny dla dzieci",
@@ -23,6 +26,7 @@
         },
         {
             "id": 4,
+            "url": "img99.jpg",
             "category": "taniecrekreacyjny",
             "title": "Pierwszy Taniec",
             "subtitle": "Taniec dla Par Młodych",
@@ -30,6 +34,7 @@
         },
         {
             "id": 5,
+            "url": "img22.jpg",
             "category": "taniecsportowy",
             "title": "Taniec sportowy",
             "subtitle": "Taniec turniejowy",
@@ -37,6 +42,7 @@
         },
         {
             "id": 6,
+            "url": "img11.jpg",
             "category": "taniecsportowy",
             "title": "Pro-Am",
             "subtitle": "Taniec towarzyski z profesjonalnym partnerem tanecznym",
@@ -44,6 +50,7 @@
         },
         {
             "id": 7,
+            "url": "img98.jpg",
             "category": "taniecsportowy",
             "title": "Pokazy taneczne",
             "subtitle": "Profesjonalistyczne pokazy taneczne",
@@ -51,6 +58,7 @@
         },
         {
             "id": 8,
+            "url": "img8.jpg",
             "category": "wynajem",
             "title": "Wynajem Studia",
             "subtitle": "Wynajem studia dla osób prywatnych i firm",
