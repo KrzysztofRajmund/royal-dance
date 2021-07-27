@@ -13,7 +13,7 @@
             "url": "img18.jpg",
             "category": "taniecrekreacyjny",
             "title": "Dla Par",
-            "subtitle": "Taniec dla wszystkich",
+            "subtitle": "Taniec dla par",
             "desc": "W naszej szkole oferujemy profesjonalny kurs tańca towarzyskiego dla dorosłych, jak i tańce indywidualne."
         },
         {
@@ -62,7 +62,7 @@
             "category": "wynajem",
             "title": "Wynajem Studia",
             "subtitle": "Wynajem studia dla osób prywatnych i firm",
-            "desc": "Wynajem studia....W celu otrzymania indywidualnej oferty wynajmu prosze o kontakt telefoniczny."
+            "desc": "W celu otrzymania indywidualnej oferty wynajmu prosze o kontakt telefoniczny."
         }
     ]
 }

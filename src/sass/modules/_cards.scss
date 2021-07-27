@@ -38,7 +38,11 @@
 .cards-subcontent {
   z-index: 2;
   flex: 33%;
-  padding: 8rem 4rem 4rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15rem;
   text-align: left;
   background-color: $supplementaryBackground;
   color: $subcontentFontColor;

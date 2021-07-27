@@ -30,7 +30,6 @@ const OffersTwo: React.FC<Props> = ({ id, image, title, subtitle, desc }) => {
                     <p className="cards-subcontent-title">{subtitle}</p>
                     <br />
                     <p>{desc}</p>
-                    <p>{desc}</p>
                 </div>
                 <div className="cards-content" style={sectionStyle}>
                     <h1><img src={Logo2} alt="logo" /></h1>
