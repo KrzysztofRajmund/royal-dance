@@ -10,21 +10,22 @@ import offerData from "../../offerData.json"
 
 
 const FamilyDance: React.FC = () => {
-    const getIDHandler = (word: string) => {
-        let newWord
-        if (word.includes(" ")) {
+    const getIDHandler = (word: string | undefined): any => {
+        let newWord: any;
+        let newWordSec: any
+        if (word) {
             newWord = word.split(" ")[0]
-        } else {
-            newWord = word
+            newWordSec = word.split(" ")[1]
+            return `${newWord}${(newWordSec ? newWordSec : '')}`
         }
-        return newWord
+
     }
 
     return (
 
 
         <>
-            <Header menuNav={true} image={Image} title="Taniec rekreacyjny" desc="w każdej grupie wiekowej" menu={{ latino: "Latino Ladies", standard: "Kurs tańca dla dorosłych", kids: "Kids mix taneczny", wedding: "Pierwszy taniec" }} />
+            <Header menuNav={true} image={Image} title="Taniec rekreacyjny" desc="w każdej grupie wiekowej" menu={{ latino: "Dla Kobiet", standard: "Dla Par", kids: "Dla Dzieci", wedding: "Pierwszy Taniec" }} />
             {offerData.offer.map((item) => {
                 if (item.category === "taniecrekreacyjny" && offerData.offer.indexOf(item) % 2 === 0) {
                     return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} />

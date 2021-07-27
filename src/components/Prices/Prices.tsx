@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: "2rem",
+            paddingBottom: "4rem",
             '& .MuiTableCell-root': {
                 fontSize: "1.2rem",
             },

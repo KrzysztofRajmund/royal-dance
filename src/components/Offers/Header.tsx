@@ -47,7 +47,7 @@ interface Props {
         kids?: string,
         wedding?: string,
         proAM?: string,
-        ballet?: string
+        showDance?: string
 
     }
 }

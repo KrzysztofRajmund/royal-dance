@@ -15,12 +15,11 @@ interface Props {
         kids?: string,
         wedding?: string,
         proAM?: string,
-        ballet?: string
+        showDance?: string
     }
 }
 
 const Menu: React.FC<Props> = ({ ...props }) => {
-    console.log("props", props)
     useEffect(() => {
         AOS.init({
             offset: 150,
@@ -41,11 +40,13 @@ const Menu: React.FC<Props> = ({ ...props }) => {
             : (targetMenuFast.textContent = 'Menu');
     };
 
-    const getIDHandler = (word: string | undefined) => {
-        let newWord: any
+    const getIDHandler = (word: string | undefined): any => {
+        let newWord: any;
+        let newWordSec: any
         if (word) {
             newWord = word.split(" ")[0]
-            return newWord
+            newWordSec = word.split(" ")[1]
+            return `${newWord}${(newWordSec ? newWordSec : '')}`
         }
 
     }
@@ -83,7 +84,7 @@ const Menu: React.FC<Props> = ({ ...props }) => {
                     onClick={displayFastMenu}
                 >
                     Menu
-          </section>
+                </section>
                 <div className='titles-container-menu-spread'>
                     <div className='titles-container-menu-spread-card'>
                         {loopObject}
