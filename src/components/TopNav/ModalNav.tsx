@@ -28,6 +28,7 @@ const ModalNav: React.FC<Props> = ({ ...props }) => {
                         <Link to="/wynajem-studia" onClick={props.closeNavModal} >Wynajem sali</Link>
                     </div>
                 </div>
+                <Link to="/cennik" onClick={props.closeNavModal}>Cennik</Link>
                 <Link to="/galeria" onClick={props.closeNavModal} >Galeria</Link>
                 <Link to="/kontakt" onClick={props.closeNavModal} >Kontakt</Link>
             </section>
