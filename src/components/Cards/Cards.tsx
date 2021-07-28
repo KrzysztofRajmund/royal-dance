@@ -25,7 +25,7 @@ const Cards: React.FC = () => {
             <article>
                 <div className="cards-content">
                     <h1>Kursy grupowe</h1>
-                    <h1>Kursy indywiduane</h1>
+                    <h1>Kursy indywidualne</h1>
 
                 </div>
                 <div className="cards-subcontent">
