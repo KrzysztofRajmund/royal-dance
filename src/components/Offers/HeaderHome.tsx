@@ -97,7 +97,7 @@ const HeaderHome: React.FC<Props> = ({ ...props }) => {
             <Paper square variant="outlined" className={classes.paperCard}>
                 <div className="header-container">
                     <article>
-                        <div data-aos='fade-left' className='entrance'>
+                        <div data-aos={window.innerWidth < 445 ? 'zoom-in' : 'fade-left'} className='entrance'>
                             <h1 className='entrance-title' >  {props.title}</h1>
                             <h5 className='entrance-subtitle'>
                                 {props.desc}
