@@ -231,6 +231,7 @@
       padding-left: 2rem;
     }
   }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -247,6 +248,19 @@
       padding-left: 2rem;
     }
   }
+
+    .offers {
+  article {
+    .cards-content {
+      h1 {
+        img {
+          width: auto;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
 }
 
 @media screen and (max-width: 400px) {
