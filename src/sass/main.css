@@ -242,6 +242,12 @@ body {
   letter-spacing: 0.3rem;
 }
 
+.cards-content h1 img {
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+}
+
 .cards-content h1:last-of-type {
   color: #d7bd78;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 //assets
-import Logo2 from "../../assets/logo2.png"
+import Logo2 from "../../assets/logo2.png";
 
 interface Props {
     id: string,

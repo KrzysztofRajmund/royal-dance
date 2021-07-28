@@ -30,6 +30,13 @@
   background-color: $blackBackground;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+      h1 {
+        img {
+          width: 150px;
+          height: auto;
+          opacity: 0.6;
+        }
+      }
   h1:last-of-type {
     color: $supplementaryFontColor;
   }

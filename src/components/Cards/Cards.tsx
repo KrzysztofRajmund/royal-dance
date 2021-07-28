@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 //components
 import CardsSlider from './CardsSlider';
+//assets
+import Logo2 from "../../assets/logo2.png";
 
 
 const Cards: React.FC = () => {
@@ -24,9 +26,7 @@ const Cards: React.FC = () => {
         <section className="cards-container">
             <article>
                 <div className="cards-content">
-                    <h1>Kursy grupowe</h1>
-                    <h1>Kursy indywidualne</h1>
-
+                    <h1><img src={Logo2} alt="logo" /></h1>
                 </div>
                 <div className="cards-subcontent">
                     <p>Masz trochę wolnego czasu i chcesz wykorzystać go na dobrą rozrywkę?</p>

@@ -2,7 +2,7 @@
     "offer": [
         {
             "id": 1,
-            "url": "img1.jpg",
+            "url": "img101.jpg",
             "category": "taniecrekreacyjny",
             "title": "Dla Kobiet",
             "subtitle": "Taniec dla kobiet",
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "url": "img18.jpg",
+            "url": "img102.jpg",
             "category": "taniecrekreacyjny",
             "title": "Dla Par",
             "subtitle": "Taniec dla par",
