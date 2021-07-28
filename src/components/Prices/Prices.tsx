@@ -19,15 +19,18 @@ const useStyles = makeStyles((theme: Theme) =>
             '& .MuiTableCell-root': {
                 fontSize: "1.2rem",
             },
-            [theme.breakpoints.down(580)]: {
-                padding: "0rem",
+            [theme.breakpoints.down(775)]: {
+                padding: "0rem 0rem 4rem 0rem",
             }
         },
         table: {
             width: "70%",
-            [theme.breakpoints.down(580)]: {
+            [theme.breakpoints.down(995)]: {
+                width: "90%",
+            },
+            [theme.breakpoints.down(775)]: {
                 width: "100%",
-            }
+            },
 
         },
 
@@ -43,8 +46,8 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         nameCell: {
             [theme.breakpoints.down(455)]: {
-                backgroundColor: '#d7bd78',
                 textAlign: "left",
+                fontWeight: 600,
             }
         },
         cell: {
@@ -59,28 +62,27 @@ const useStyles = makeStyles((theme: Theme) =>
             color: "#2b2b2b",
             letterSpacing: "0.4rem",
             [theme.breakpoints.down(530)]: {
-                fontSize: "1.3rem",
-                fontWeight: 600,
                 textAlign: "left",
+                paddingBottom: "1.5rem",
             }
 
         }
     }));
 
-function createData(name: string, frequency: string | null, time: number | null, price: number | null) {
+function createData(name: string, frequency: string | null, time: number | null, price: string | null) {
     return { name, frequency, time, price };
 }
 
 const rows = [
-    createData('Zajęcia dla Dzieci', '2x w tygodniu', 45, 120),
-    createData('Zajęcia dla Pań', '2x w tygodniu', 60, 180),
-    createData('Zajęcia dla Par', '1x w tygodniu', 60, 100),
-    createData('Zajęcia indywidulne dla Nowożeńców', null, 60, 110),
-    createData('Zajęcia indywidulne Pro-Am', null, 45, 110),
-    createData('Zajęcia SPORT', null, null, 200),
-    createData('Wynajem sali', 'zajęcia indywidualne', null, 35),
+    createData('Zajęcia dla Dzieci', '2x w tygodniu', 45, '120 zł/msc'),
+    createData('Zajęcia dla Pań', '2x w tygodniu', 60, '180 zł/msc'),
+    createData('Zajęcia dla Par', '1x w tygodniu', 60, '100 zł/msc'),
+    createData('Zajęcia indywidulne dla Nowożeńców', null, 60, '110 zł/zajęcie'),
+    createData('Zajęcia indywidulne Pro-Am', null, 45, '110 zł/zajęcie'),
+    createData('Zajęcia SPORT', null, null, '200 zł/msc'),
+    createData('Wynajem sali', 'zajęcia indywidualne', null, '35 zł/h'),
     createData('Profesjonalne Pokazy Taneczne', 'według indywidualnych ustaleń', null, null),
-    createData('Jednorazowe wejście na wybrane zajęcia', null, null, 35),
+    createData('Jednorazowe wejście na wybrane zajęcia', null, null, '35 zł/h'),
 ];
 
 const title = 'Cennik'
@@ -103,7 +105,7 @@ const Prices: React.FC = () => {
                                 </TableCell>
                                 <TableCell className={classes.cell} align="right">{row.frequency ? row.frequency : ""}</TableCell>
                                 <TableCell className={classes.cell} align="right">{row.time ? row.time + 'min' : ''}</TableCell>
-                                <TableCell className={classes.cell} align="right">{row.price ? row.price + 'pln' : ''}</TableCell>
+                                <TableCell className={classes.cell} align="right">{row.price ? row.price : ''}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
