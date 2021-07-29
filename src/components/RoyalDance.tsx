@@ -22,7 +22,6 @@ const RoyalDance: React.FC = () => {
   return (
     <Router>
       <TopNav />
-
       <Switch>
         <Route path="/onas">
           <About />
@@ -48,14 +47,10 @@ const RoyalDance: React.FC = () => {
         <Route path="/">
           <TopJumbotron />
           <HeaderHome image={Image} title={window.innerWidth < 380 ? "Taniec" : "Dołącz do Nas!"} desc={(window.innerWidth < 445 ? "Rekreacyjny i Sportowy" : "Taniec rekreacyjny i sportowy")} />
-
-
           <GalleryHome />
           <About />
           <Cards />
-
         </Route>
-
       </Switch>
       <Footer />
     </Router>
