@@ -27,10 +27,13 @@ const SportDance: React.FC = () => {
         <>
             <Header menuNav={true} image={Image} title="Taniec sportowy" desc="solo i w parze" menu={{ latino: "Taniec sportowy", proAM: "Pro-Am", showDance: "Pokazy taneczne" }} />
             {offerData.offer.map((item) => {
-                if (item.category === "taniecsportowy" && offerData.offer.indexOf(item) % 2 === 0) {
+                if (item.category === "taniecsportowy" && window.innerWidth < 825) {
                     return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} image={item.url} />
                 }
-                if (item.category === "taniecsportowy" && offerData.offer.indexOf(item) % 2 === 1) {
+                if (item.category === "taniecsportowy" && offerData.offer.indexOf(item) % 2 === 0 && window.innerWidth >= 825) {
+                    return <Offers id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} image={item.url} />
+                }
+                if (item.category === "taniecsportowy" && offerData.offer.indexOf(item) % 2 === 1 && window.innerWidth >= 825) {
                     return <OffersTwo id={getIDHandler(item.title)} title={item.title} subtitle={item.subtitle} desc={item.desc} image={item.url} />
                 }
                 return null;
