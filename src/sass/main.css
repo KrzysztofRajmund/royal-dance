@@ -1530,7 +1530,7 @@ body {
     min-width: 120px;
   }
   .offers article .cards-content {
-    padding: 8rem 2rem 4rem 2rem;
+    padding: 25rem 15rem 2rem 15rem;
   }
   .offers article .cards-content .offers-title {
     font-size: 2.2rem;
@@ -1597,6 +1597,9 @@ body {
   .header-container h5 {
     font-size: 1rem;
     padding-left: 2rem;
+  }
+  .offers article .cards-content {
+    padding: 15rem 5rem 1rem 5rem;
   }
 }
 
